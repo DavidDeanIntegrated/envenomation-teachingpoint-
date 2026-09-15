@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Arizona Envenomation | Shift Change Teaching Point</title>
+<meta name="theme-color" content="#07111f">
+<style>
+:root{
+  --bg:#07111f;
+  --bg2:#0b1728;
+  --panel:rgba(255,255,255,.075);
+  --panel-strong:rgba(255,255,255,.11);
+  --line:rgba(255,255,255,.14);
+  --text:#f6f8fb;
+  --muted:#aebbd0;
+  --snake:#ffb24a;
+  --scorpion:#79d7ff;
+  --green:#73e6a6;
+  --red:#ff7a8a;
+  --purple:#bfa2ff;
+  --shadow:0 25px 70px rgba(0,0,0,.32);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-snap-type:y proximity}
+body{
+  margin:0;
+  color:var(--text);
+  background:
+    radial-gradient(circle at 15% 10%, rgba(255,178,74,.08), transparent 26rem),
+    radial-gradient(circle at 90% 18%, rgba(121,215,255,.08), transparent 30rem),
+    linear-gradient(180deg,var(--bg),#050b14 72%,#03070d);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  overflow-x:hidden;
+}
+a{color:inherit}
+.topbar{
+  position:fixed; z-index:50; left:0; right:0; top:0;
+  display:flex; align-items:center; gap:14px;
+  padding:14px 18px;
+  background:linear-gradient(180deg,rgba(3,8,15,.94),rgba(3,8,15,.55),transparent);
+  backdrop-filter:blur(10px);
+}
+.brand{
+  font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted);
+  white-space:nowrap;
+}
+.progress{
+  flex:1; height:4px; background:rgba(255,255,255,.08); border-radius:999px; overflow:hidden;
+}
+.progress > div{height:100%; width:0; background:linear-gradient(90deg,var(--snake),var(--scorpion)); transition:width .15s linear}
+.kbd{
+  font-size:11px;color:var(--muted);border:1px solid var(--line);border-radius:8px;padding:5px 8px;background:rgba(255,255,255,.04)
+}
+section{
+  min-height:100vh;
+  scroll-snap-align:start;
+  display:flex;
+  align-items:center;
+  padding:86px 7vw 58px;
+  position:relative;
+}
+.wrap{width:min(1180px,100%);margin:0 auto}
+.eyebrow{
+  font-size:13px;text-transform:uppercase;letter-spacing:.18em;color:var(--muted);margin-bottom:18px;font-weight:750
+}
+h1{font-size:clamp(52px,8.5vw,122px);line-height:.91;letter-spacing:-.055em;margin:0 0 26px;max-width:1050px}
+h2{font-size:clamp(38px,5.8vw,82px);line-height:.95;letter-spacing:-.045em;margin:0 0 22px}
+h3{font-size:clamp(23px,3vw,38px);line-height:1.05;letter-spacing:-.03em;margin:0}
+p{font-size:clamp(18px,2vw,27px);line-height:1.45;color:#e9edf5;max-width:900px}
+.lede{font-size:clamp(22px,2.6vw,34px);line-height:1.35;color:#dce6f4;max-width:950px}
+.muted{color:var(--muted)}
+.grid{display:grid;gap:18px}
+.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.card{
+  border:1px solid var(--line);background:var(--panel);border-radius:26px;padding:28px;box-shadow:var(--shadow);
+  backdrop-filter:blur(14px);
+}
+.card.snake{box-shadow:inset 0 0 0 1px rgba(255,178,74,.08),var(--shadow)}
+.card.scorp{box-shadow:inset 0 0 0 1px rgba(121,215,255,.08),var(--shadow)}
+.tag{
+  display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:7px 11px;font-size:12px;font-weight:800;
+  letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--line);background:rgba(255,255,255,.05);margin-bottom:16px
+}
+.tag.snake{color:var(--snake)}
+.tag.scorp{color:var(--scorpion)}
+.big{
+  font-size:clamp(31px,4vw,60px);font-weight:850;line-height:1.03;letter-spacing:-.04em
+}
+ul{padding-left:1.1em;margin:18px 0 0}
+li{font-size:clamp(18px,1.8vw,25px);line-height:1.5;margin:.38em 0;color:#e9edf5}
+.callout{
+  border-left:4px solid var(--green);padding:16px 0 16px 22px;margin-top:24px;font-size:clamp(20px,2.2vw,30px);line-height:1.36;font-weight:700
+}
+.warning{border-left-color:var(--red)}
+.compare{
+  display:grid;grid-template-columns:1fr auto 1fr;gap:20px;align-items:stretch;margin-top:34px
+}
+.vs{display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:12px;font-weight:900;letter-spacing:.18em}
+.metric{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin-bottom:10px}
+.stat{font-size:clamp(38px,5vw,68px);font-weight:900;letter-spacing:-.05em}
+.pill{
+  display:inline-block;border:1px solid var(--line);background:rgba(255,255,255,.045);padding:8px 12px;border-radius:999px;
+  margin:5px 6px 0 0;font-size:15px
+}
+.flow{display:grid;gap:14px;margin-top:26px}
+.step{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:start;border:1px solid var(--line);border-radius:20px;padding:18px 20px;background:rgba(255,255,255,.045)}
+.num{width:36px;height:36px;border-radius:12px;display:grid;place-items:center;background:rgba(255,255,255,.09);font-weight:900}
+.center{text-align:center}
+.center p{margin-left:auto;margin-right:auto}
+.hero-orb{
+  position:absolute;right:-12vw;bottom:-18vw;width:48vw;height:48vw;border-radius:50%;
+  background:radial-gradient(circle at 45% 40%, rgba(121,215,255,.14), transparent 52%),radial-gradient(circle at 62% 62%,rgba(255,178,74,.12),transparent 50%);
+  filter:blur(2px);pointer-events:none
+}
+.note{
+  font-size:14px;color:var(--muted);line-height:1.55;margin-top:18px
+}
+.ref-list{counter-reset:refs}
+.ref{display:grid;grid-template-columns:36px 1fr;gap:10px;margin:12px 0;color:#d7e0ed;font-size:15px;line-height:1.5}
+.ref:before{counter-increment:refs;content:counter(refs);width:26px;height:26px;border:1px solid var(--line);border-radius:8px;display:grid;place-items:center;color:var(--muted);font-size:12px}
+.navdots{position:fixed;right:18px;top:50%;transform:translateY(-50%);z-index:40;display:grid;gap:9px}
+.navdots a{width:8px;height:8px;border-radius:99px;background:rgba(255,255,255,.22);display:block;transition:.2s}
+.navdots a.active{height:28px;background:linear-gradient(var(--snake),var(--scorpion))}
+footer{padding:36px 7vw 60px;color:var(--muted);font-size:13px}
+@media(max-width:800px){
+  .two,.three,.compare{grid-template-columns:1fr}
+  .vs{display:none}
+  .navdots{display:none}
+  .kbd{display:none}
+  section{padding:84px 20px 46px}
+  .card{padding:22px;border-radius:22px}
+}
+@media print{
+  .topbar,.navdots{display:none}
+  body{background:white;color:black}
+  section{min-height:auto;page-break-after:always;padding:36px}
+  .card{box-shadow:none;border:1px solid #ccc;background:white}
+  p,li,.lede{color:#222}
+}
+</style>
+<script type="text/javascript" nonce="e440df172f4e4210ad1cd5abeb5" src="//local.adguard.org?ts=1789507331733&amp;type=content-script&amp;dmn=chatgpt.com&amp;url=https%3A%2F%2Fchatgpt.com%2Fbackend-api%2Festuary%2Fcontent%3Fid%3Dfile_00000000a7b081fda9d7ee22b94d3001%26ts%3D497085%26p%3Dfs%26cid%3D1%26sig%3D81f9e7467685959803e0dd9226a41b45b1d0d13c3269cb514907eaa05f0d06d1%26v%3D0&amp;app=com.google.Chrome&amp;css=2&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=1"></script><script type="text/javascript" nonce="e440df172f4e4210ad1cd5abeb5" src="//local.adguard.org?ts=1789507331733&amp;name=AdGuard%20Extra&amp;type=user-script"></script></head>
+<body>
+<div class="topbar">
+  <div class="brand">Shift Change • Arizona Envenomation</div>
+  <div class="progress"><div id="progressBar"></div></div>
+  <div class="kbd">↓ / Space</div>
+</div>
+
+<nav class="navdots" aria-label="Presentation sections">
+  <a href="#s1" title="Title"></a><a href="#s2" title="Cases"></a><a href="#s3" title="Rattlesnake"></a>
+  <a href="#s4" title="Rattlesnake treatment"></a><a href="#s5" title="Scorpion"></a><a href="#s6" title="Scorpion treatment"></a>
+  <a href="#s7" title="Antivenom"></a><a href="#s8" title="Takeaways"></a><a href="#s9" title="References"></a>
+</nav>
+
+<section id="s1">
+  <div class="wrap">
+    <div class="eyebrow">5-minute emergency medicine teaching point</div>
+    <h1>Arizona<br><span style="color:var(--snake)">Envenomation</span></h1>
+    <p class="lede">Rattlesnake bites and bark scorpion stings: recognizing the moment supportive care becomes <strong>antivenom care</strong>.</p>
+    <div style="margin-top:34px">
+      <span class="pill">Rattlesnake = tissue + blood + systemic</span>
+      <span class="pill">Scorpion = neurotoxicity</span>
+    </div>
+  </div>
+  <div class="hero-orb"></div>
+</section>
+
+<section id="s2">
+  <div class="wrap">
+    <div class="eyebrow">Start with two patients</div>
+    <div class="grid two">
+      <div class="card snake">
+        <div class="tag snake">Case 1 • Rattlesnake</div>
+        <div class="big">30-year-old, ankle bite</div>
+        <ul>
+          <li>Pain + 4 cm swelling</li>
+          <li>Normal vital signs</li>
+          <li>Platelets and fibrinogen normal</li>
+          <li>No systemic symptoms</li>
+        </ul>
+      </div>
+      <div class="card scorp">
+        <div class="tag scorp">Case 2 • Scorpion</div>
+        <div class="big">3-year-old, scorpion sting</div>
+        <ul>
+          <li>Drooling</li>
+          <li>Roving eye movements</li>
+          <li>Intermittent jerking</li>
+          <li>Symptoms began within 20 minutes</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout">Question for the room: <strong>Who needs antivenom right now?</strong></div>
+  </div>
+</section>
+
+<section id="s3">
+  <div class="wrap">
+    <div class="eyebrow">Rattlesnake</div>
+    <h2>Think: <span style="color:var(--snake)">Tissue + Blood + Systemic</span></h2>
+    <div class="grid three">
+      <div class="card"><h3>Local</h3><ul><li>Pain</li><li>Progressive edema</li><li>Ecchymosis / blistering</li></ul></div>
+      <div class="card"><h3>Hematologic</h3><ul><li>Thrombocytopenia</li><li>Low fibrinogen</li><li>Coagulation abnormalities</li></ul></div>
+      <div class="card"><h3>Systemic</h3><ul><li>Hypotension</li><li>Nausea / vomiting</li><li>Neurotoxicity in some venom phenotypes</li></ul></div>
+    </div>
+    <div class="callout">A bite alone is <em>not</em> the indication. <strong>Progressive envenomation is.</strong></div>
+  </div>
+</section>
+
+<section id="s4">
+  <div class="wrap">
+    <div class="eyebrow">Rattlesnake management</div>
+    <h2>What am I doing in the first 15 minutes?</h2>
+    <div class="flow">
+      <div class="step"><div class="num">1</div><div><h3>Mark + measure</h3><p>Mark the leading edge of swelling and reassess serially.</p></div></div>
+      <div class="step"><div class="num">2</div><div><h3>Check the blood</h3><p>CBC/platelets, PT/INR, fibrinogen ± additional labs guided by the presentation.</p></div></div>
+      <div class="step"><div class="num">3</div><div><h3>Call Poison Control early</h3><p>Progressive local injury, clinically important hematologic toxicity, or systemic toxicity should trigger antivenom discussion.</p></div></div>
+    </div>
+    <div class="callout warning"><strong>Don’t:</strong> tourniquet • suction • cutting • electrical shock • ice</div>
+    <p class="note">Arizona Poison Control advises observation even after an apparently dry bite because delayed envenomation can occur.</p>
+  </div>
+</section>
+
+<section id="s5">
+  <div class="wrap">
+    <div class="eyebrow">Arizona bark scorpion</div>
+    <h2>Think: <span style="color:var(--scorpion)">Neurotoxicity</span></h2>
+    <div class="compare">
+      <div class="card">
+        <div class="metric">Usually mild</div>
+        <div class="stat">Grade I–II</div>
+        <p>Local pain and paresthesias, sometimes extending away from the sting.</p>
+      </div>
+      <div class="vs">VERSUS</div>
+      <div class="card scorp">
+        <div class="metric">Severe</div>
+        <div class="stat">Grade III–IV</div>
+        <p>Cranial nerve dysfunction, skeletal neuromuscular dysfunction, or both.</p>
+      </div>
+    </div>
+    <div style="margin-top:28px" class="grid three">
+      <div class="card"><h3>Eyes</h3><p>Roving or abnormal eye movements</p></div>
+      <div class="card"><h3>Mouth</h3><p>Drooling, dysarthria, dysphagia, tongue fasciculations</p></div>
+      <div class="card"><h3>Muscles</h3><p>Fasciculations, jerking, marked neuromuscular agitation</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="s6">
+  <div class="wrap">
+    <div class="eyebrow">Scorpion management</div>
+    <h2>The 3-year-old has the answer written all over the exam.</h2>
+    <div class="card scorp" style="max-width:930px">
+      <div class="big">Drooling + roving eyes + jerking</div>
+      <p class="lede" style="margin-bottom:0">That is severe neurotoxicity. Think airway, monitoring, toxicology, and <strong>Anascorp</strong>.</p>
+    </div>
+    <div class="callout">The bedside exam is the key diagnostic test.</div>
+  </div>
+</section>
+
+<section id="s7">
+  <div class="wrap">
+    <div class="eyebrow">Antivenom numbers worth remembering</div>
+    <div class="grid three">
+      <div class="card snake">
+        <div class="tag snake">CroFab</div>
+        <div class="stat">4–6</div>
+        <p><strong>vials IV initially</strong></p>
+        <p class="muted">Repeat until initial control. FDA labeling then recommends 2 vials q6h × 3 after control.</p>
+      </div>
+      <div class="card snake">
+        <div class="tag snake">ANAVIP</div>
+        <div class="stat">10</div>
+        <p><strong>vials IV initially</strong></p>
+        <p class="muted">Repeat 10-vial doses if needed for initial control; 4-vial doses can be used for recurrent toxicity.</p>
+      </div>
+      <div class="card scorp">
+        <div class="tag scorp">Anascorp</div>
+        <div class="stat">3</div>
+        <p><strong>vials IV initially</strong></p>
+        <p class="muted">If clinically important findings persist, give 1 additional vial every 30–60 minutes as needed.</p>
+      </div>
+    </div>
+    <p class="note">Use local poison-center/toxicology guidance and the product labeling for the patient in front of you.</p>
+  </div>
+</section>
+
+<section id="s8">
+  <div class="wrap center">
+    <div class="eyebrow">The whole talk in 30 seconds</div>
+    <h2>Two patterns. Two triggers.</h2>
+    <div class="grid two" style="text-align:left;margin-top:28px">
+      <div class="card snake">
+        <div class="tag snake">Rattlesnake</div>
+        <div class="big">Progression</div>
+        <p>Swelling progressing?<br>Coagulopathy?<br>Systemic toxicity?</p>
+        <div class="callout" style="border-color:var(--snake)">→ Think antivenom.</div>
+      </div>
+      <div class="card scorp">
+        <div class="tag scorp">Scorpion</div>
+        <div class="big">Neurotoxicity</div>
+        <p>Eyes?<br>Mouth?<br>Muscles?</p>
+        <div class="callout" style="border-color:var(--scorpion)">→ Think Anascorp.</div>
+      </div>
+    </div>
+    <p class="lede" style="margin-top:34px"><strong>Poison Control: 1-800-222-1222</strong></p>
+  </div>
+</section>
+
+<section id="s9">
+  <div class="wrap">
+    <div class="eyebrow">Optional board-style closer</div>
+    <h2>Why does a 3-year-old often receive the same initial vial count as an 80-kg adult?</h2>
+    <div class="card" style="margin-top:30px;max-width:950px">
+      <div class="big">Because you are neutralizing the <span style="color:var(--purple)">venom burden</span>, not dosing a conventional drug by body weight.</div>
+    </div>
+    <div style="margin-top:46px">
+      <div class="eyebrow">References</div>
+      <div class="ref-list">
+        <div class="ref">FDA. CROFAB prescribing information.</div>
+        <div class="ref">FDA. ANAVIP prescribing information.</div>
+        <div class="ref">FDA. Anascorp prescribing information.</div>
+        <div class="ref">Arizona Poison and Drug Information Center. Rattlesnake and scorpion resources; 2026 “News From the Pit” updates.</div>
+      </div>
+      <p class="note">Educational use only. Management should follow the patient’s clinical course, product labeling, toxicology consultation, and local poison-center guidance.</p>
+    </div>
+  </div>
+</section>
+
+<footer>Arizona Envenomation • Shift Change Teaching Point • September 15, 2026</footer>
+
+<script>
+const sections=[...document.querySelectorAll('section')];
+const dots=[...document.querySelectorAll('.navdots a')];
+const bar=document.getElementById('progressBar');
+
+function update(){
+  const doc=document.documentElement;
+  const max=doc.scrollHeight-innerHeight;
+  bar.style.width=(max>0 ? (scrollY/max)*100 : 0)+'%';
+  let active=0;
+  sections.forEach((s,i)=>{
+    const r=s.getBoundingClientRect();
+    if(r.top<=innerHeight*.45) active=i;
+  });
+  dots.forEach((d,i)=>d.classList.toggle('active',i===active));
+}
+addEventListener('scroll',update,{passive:true});
+addEventListener('resize',update);
+update();
+
+addEventListener('keydown',(e)=>{
+  if(['ArrowDown','PageDown',' '].includes(e.key)){
+    e.preventDefault();
+    const idx=Math.min(sections.length-1, sections.findIndex(s=>s.getBoundingClientRect().top>20));
+    (sections[idx>=0?idx:sections.length-1]).scrollIntoView({behavior:'smooth'});
+  }
+  if(['ArrowUp','PageUp'].includes(e.key)){
+    e.preventDefault();
+    let idx=0;
+    sections.forEach((s,i)=>{ if(s.getBoundingClientRect().top < -20) idx=i; });
+    sections[Math.max(0,idx)].scrollIntoView({behavior:'smooth'});
+  }
+});
+</script>
+</body>
+</html>
