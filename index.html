@@ -3,366 +3,468 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Arizona Envenomation | Shift Change Teaching Point</title>
+<title>Arizona Envenomation — Pathophysiology & ED Management</title>
 <meta name="theme-color" content="#07111f">
 <style>
 :root{
-  --bg:#07111f;
-  --bg2:#0b1728;
-  --panel:rgba(255,255,255,.075);
-  --panel-strong:rgba(255,255,255,.11);
-  --line:rgba(255,255,255,.14);
-  --text:#f6f8fb;
-  --muted:#aebbd0;
-  --snake:#ffb24a;
-  --scorpion:#79d7ff;
-  --green:#73e6a6;
-  --red:#ff7a8a;
-  --purple:#bfa2ff;
-  --shadow:0 25px 70px rgba(0,0,0,.32);
+  --bg:#07111f; --bg2:#0b1728; --panel:rgba(255,255,255,.075); --line:rgba(255,255,255,.14);
+  --text:#f7f9fc; --muted:#aab7cb; --snake:#ffb24a; --scorp:#79d7ff; --green:#75e5a8;
+  --red:#ff7f8d; --purple:#bea4ff; --cyan:#82f0e8; --shadow:0 24px 70px rgba(0,0,0,.32);
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-snap-type:y proximity}
 body{
-  margin:0;
-  color:var(--text);
+  margin:0;color:var(--text);
   background:
-    radial-gradient(circle at 15% 10%, rgba(255,178,74,.08), transparent 26rem),
-    radial-gradient(circle at 90% 18%, rgba(121,215,255,.08), transparent 30rem),
-    linear-gradient(180deg,var(--bg),#050b14 72%,#03070d);
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  overflow-x:hidden;
+    radial-gradient(circle at 8% 8%,rgba(255,178,74,.075),transparent 30rem),
+    radial-gradient(circle at 94% 18%,rgba(121,215,255,.075),transparent 34rem),
+    linear-gradient(180deg,var(--bg),#050b14 74%,#02060b);
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
 }
-a{color:inherit}
 .topbar{
-  position:fixed; z-index:50; left:0; right:0; top:0;
-  display:flex; align-items:center; gap:14px;
-  padding:14px 18px;
-  background:linear-gradient(180deg,rgba(3,8,15,.94),rgba(3,8,15,.55),transparent);
-  backdrop-filter:blur(10px);
+  position:fixed;z-index:50;top:0;left:0;right:0;display:flex;gap:14px;align-items:center;padding:13px 18px;
+  background:linear-gradient(180deg,rgba(3,8,15,.95),rgba(3,8,15,.65),transparent);backdrop-filter:blur(10px)
 }
-.brand{
-  font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted);
-  white-space:nowrap;
+.brand{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.13em;white-space:nowrap}
+.progress{height:4px;flex:1;background:rgba(255,255,255,.08);border-radius:99px;overflow:hidden}
+.progress div{height:100%;width:0;background:linear-gradient(90deg,var(--snake),var(--scorp))}
+.btn{
+  border:1px solid var(--line);background:rgba(255,255,255,.05);color:var(--text);border-radius:10px;padding:7px 10px;
+  font:inherit;font-size:12px;cursor:pointer
 }
-.progress{
-  flex:1; height:4px; background:rgba(255,255,255,.08); border-radius:999px; overflow:hidden;
-}
-.progress > div{height:100%; width:0; background:linear-gradient(90deg,var(--snake),var(--scorpion)); transition:width .15s linear}
-.kbd{
-  font-size:11px;color:var(--muted);border:1px solid var(--line);border-radius:8px;padding:5px 8px;background:rgba(255,255,255,.04)
-}
-section{
-  min-height:100vh;
-  scroll-snap-align:start;
-  display:flex;
-  align-items:center;
-  padding:86px 7vw 58px;
-  position:relative;
-}
-.wrap{width:min(1180px,100%);margin:0 auto}
-.eyebrow{
-  font-size:13px;text-transform:uppercase;letter-spacing:.18em;color:var(--muted);margin-bottom:18px;font-weight:750
-}
-h1{font-size:clamp(52px,8.5vw,122px);line-height:.91;letter-spacing:-.055em;margin:0 0 26px;max-width:1050px}
-h2{font-size:clamp(38px,5.8vw,82px);line-height:.95;letter-spacing:-.045em;margin:0 0 22px}
-h3{font-size:clamp(23px,3vw,38px);line-height:1.05;letter-spacing:-.03em;margin:0}
-p{font-size:clamp(18px,2vw,27px);line-height:1.45;color:#e9edf5;max-width:900px}
-.lede{font-size:clamp(22px,2.6vw,34px);line-height:1.35;color:#dce6f4;max-width:950px}
-.muted{color:var(--muted)}
-.grid{display:grid;gap:18px}
-.two{grid-template-columns:repeat(2,minmax(0,1fr))}
-.three{grid-template-columns:repeat(3,minmax(0,1fr))}
-.card{
-  border:1px solid var(--line);background:var(--panel);border-radius:26px;padding:28px;box-shadow:var(--shadow);
-  backdrop-filter:blur(14px);
-}
+section{min-height:100vh;scroll-snap-align:start;display:flex;align-items:center;padding:82px 6.5vw 54px;position:relative}
+.wrap{width:min(1200px,100%);margin:auto}
+.eyebrow{font-size:13px;text-transform:uppercase;letter-spacing:.17em;color:var(--muted);font-weight:800;margin-bottom:18px}
+h1{font-size:clamp(52px,8vw,118px);line-height:.91;letter-spacing:-.055em;margin:0 0 24px;max-width:1100px}
+h2{font-size:clamp(38px,5.5vw,78px);line-height:.96;letter-spacing:-.045em;margin:0 0 24px}
+h3{font-size:clamp(22px,2.8vw,36px);line-height:1.05;letter-spacing:-.025em;margin:0 0 10px}
+h4{font-size:18px;margin:0 0 8px}
+p{font-size:clamp(18px,1.9vw,25px);line-height:1.47;color:#e7edf6;max-width:950px}
+.lede{font-size:clamp(22px,2.5vw,33px);line-height:1.36;color:#dce5f2}
+.small{font-size:15px;line-height:1.55;color:var(--muted)}
+em.tax{font-family:Georgia,serif;font-style:italic;color:white}
+.grid{display:grid;gap:18px}.two{grid-template-columns:repeat(2,minmax(0,1fr))}.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.card{border:1px solid var(--line);background:var(--panel);border-radius:25px;padding:26px;box-shadow:var(--shadow);backdrop-filter:blur(12px)}
 .card.snake{box-shadow:inset 0 0 0 1px rgba(255,178,74,.08),var(--shadow)}
 .card.scorp{box-shadow:inset 0 0 0 1px rgba(121,215,255,.08),var(--shadow)}
-.tag{
-  display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:7px 11px;font-size:12px;font-weight:800;
-  letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--line);background:rgba(255,255,255,.05);margin-bottom:16px
-}
-.tag.snake{color:var(--snake)}
-.tag.scorp{color:var(--scorpion)}
-.big{
-  font-size:clamp(31px,4vw,60px);font-weight:850;line-height:1.03;letter-spacing:-.04em
-}
-ul{padding-left:1.1em;margin:18px 0 0}
-li{font-size:clamp(18px,1.8vw,25px);line-height:1.5;margin:.38em 0;color:#e9edf5}
-.callout{
-  border-left:4px solid var(--green);padding:16px 0 16px 22px;margin-top:24px;font-size:clamp(20px,2.2vw,30px);line-height:1.36;font-weight:700
-}
-.warning{border-left-color:var(--red)}
-.compare{
-  display:grid;grid-template-columns:1fr auto 1fr;gap:20px;align-items:stretch;margin-top:34px
-}
-.vs{display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:12px;font-weight:900;letter-spacing:.18em}
-.metric{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin-bottom:10px}
-.stat{font-size:clamp(38px,5vw,68px);font-weight:900;letter-spacing:-.05em}
-.pill{
-  display:inline-block;border:1px solid var(--line);background:rgba(255,255,255,.045);padding:8px 12px;border-radius:999px;
-  margin:5px 6px 0 0;font-size:15px
-}
-.flow{display:grid;gap:14px;margin-top:26px}
-.step{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:start;border:1px solid var(--line);border-radius:20px;padding:18px 20px;background:rgba(255,255,255,.045)}
-.num{width:36px;height:36px;border-radius:12px;display:grid;place-items:center;background:rgba(255,255,255,.09);font-weight:900}
-.center{text-align:center}
-.center p{margin-left:auto;margin-right:auto}
-.hero-orb{
-  position:absolute;right:-12vw;bottom:-18vw;width:48vw;height:48vw;border-radius:50%;
-  background:radial-gradient(circle at 45% 40%, rgba(121,215,255,.14), transparent 52%),radial-gradient(circle at 62% 62%,rgba(255,178,74,.12),transparent 50%);
-  filter:blur(2px);pointer-events:none
-}
+.tag{display:inline-flex;padding:7px 11px;border:1px solid var(--line);border-radius:999px;text-transform:uppercase;letter-spacing:.09em;font-size:11px;font-weight:900;margin-bottom:14px}
+.tag.snake{color:var(--snake)}.tag.scorp{color:var(--scorp)}.tag.deep{color:var(--purple)}
+.big{font-size:clamp(30px,4.2vw,58px);font-weight:900;line-height:1.03;letter-spacing:-.04em}
+ul{padding-left:1.1em;margin:12px 0 0}li{font-size:clamp(17px,1.6vw,23px);line-height:1.45;margin:.38em 0;color:#e8edf4}
+.callout{border-left:4px solid var(--green);padding:15px 0 15px 20px;margin-top:23px;font-size:clamp(19px,2vw,28px);line-height:1.38;font-weight:750}
+.callout.red{border-color:var(--red)}.callout.snake{border-color:var(--snake)}.callout.scorp{border-color:var(--scorp)}
+.path{display:grid;grid-template-columns:1fr auto 1.25fr auto 1fr;gap:10px;align-items:center;margin-top:28px}
+.node{border:1px solid var(--line);background:rgba(255,255,255,.055);padding:18px;border-radius:19px;text-align:center;min-height:120px;display:flex;flex-direction:column;justify-content:center}
+.arrow{font-size:34px;color:var(--muted);text-align:center}
+.molecule{font-size:12px;text-transform:uppercase;letter-spacing:.11em;color:var(--muted);margin-bottom:7px}
+.table{display:grid;grid-template-columns:1.15fr 1.6fr 1.5fr;border:1px solid var(--line);border-radius:20px;overflow:hidden;margin-top:24px}
+.cell{padding:16px 18px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);font-size:16px;line-height:1.42}
+.cell:nth-child(3n){border-right:none}.head{background:rgba(255,255,255,.08);font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);font-weight:800}
+.table .cell:nth-last-child(-n+3){border-bottom:none}
+.kpi{font-size:clamp(42px,6vw,76px);font-weight:950;letter-spacing:-.055em}
+.flow{display:grid;gap:12px;margin-top:24px}
+.step{display:grid;grid-template-columns:38px 1fr;gap:15px;align-items:start;border:1px solid var(--line);background:rgba(255,255,255,.045);border-radius:18px;padding:16px 18px}
+.num{width:36px;height:36px;border-radius:11px;background:rgba(255,255,255,.09);display:grid;place-items:center;font-weight:900}
 .note{
-  font-size:14px;color:var(--muted);line-height:1.55;margin-top:18px
+  display:none;margin-top:20px;border:1px dashed rgba(190,164,255,.5);background:rgba(190,164,255,.065);border-radius:18px;padding:16px 18px;color:#ddd5f3;font-size:15px;line-height:1.52
 }
-.ref-list{counter-reset:refs}
-.ref{display:grid;grid-template-columns:36px 1fr;gap:10px;margin:12px 0;color:#d7e0ed;font-size:15px;line-height:1.5}
-.ref:before{counter-increment:refs;content:counter(refs);width:26px;height:26px;border:1px solid var(--line);border-radius:8px;display:grid;place-items:center;color:var(--muted);font-size:12px}
-.navdots{position:fixed;right:18px;top:50%;transform:translateY(-50%);z-index:40;display:grid;gap:9px}
-.navdots a{width:8px;height:8px;border-radius:99px;background:rgba(255,255,255,.22);display:block;transition:.2s}
-.navdots a.active{height:28px;background:linear-gradient(var(--snake),var(--scorpion))}
-footer{padding:36px 7vw 60px;color:var(--muted);font-size:13px}
-@media(max-width:800px){
-  .two,.three,.compare{grid-template-columns:1fr}
-  .vs{display:none}
-  .navdots{display:none}
-  .kbd{display:none}
-  section{padding:84px 20px 46px}
-  .card{padding:22px;border-radius:22px}
+body.notes .note{display:block}
+.study{border-left:3px solid var(--purple);padding-left:18px;margin:19px 0}
+.study strong{color:white}.study p{font-size:17px;margin:5px 0;color:#dfe6f0}
+.ref{font-size:14px;line-height:1.5;color:#cbd5e4;margin:9px 0}.ref a{color:#d8e6ff;text-decoration:none;border-bottom:1px solid rgba(216,230,255,.25)}
+.nav{position:fixed;right:16px;top:50%;transform:translateY(-50%);display:grid;gap:7px;z-index:40}
+.nav a{width:7px;height:7px;border-radius:99px;background:rgba(255,255,255,.2);transition:.2s}.nav a.active{height:24px;background:linear-gradient(var(--snake),var(--scorp))}
+.center{text-align:center}.center p{margin-left:auto;margin-right:auto}
+.pill{display:inline-block;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.045);padding:7px 11px;margin:4px;font-size:14px}
+.sep{height:1px;background:var(--line);margin:25px 0}
+@media(max-width:850px){
+  section{padding:82px 19px 45px}.two,.three,.path{grid-template-columns:1fr}.arrow{transform:rotate(90deg)}.table{grid-template-columns:1fr}.cell{border-right:none}.head{display:none}.nav{display:none}.btn.hint{display:none}
 }
-@media print{
-  .topbar,.navdots{display:none}
-  body{background:white;color:black}
-  section{min-height:auto;page-break-after:always;padding:36px}
-  .card{box-shadow:none;border:1px solid #ccc;background:white}
-  p,li,.lede{color:#222}
-}
+@media print{.topbar,.nav{display:none}section{min-height:auto;page-break-after:always;padding:30px}.card{box-shadow:none}.note{display:block}}
 </style>
-<script type="text/javascript" nonce="e440df172f4e4210ad1cd5abeb5" src="//local.adguard.org?ts=1789507331733&amp;type=content-script&amp;dmn=chatgpt.com&amp;url=https%3A%2F%2Fchatgpt.com%2Fbackend-api%2Festuary%2Fcontent%3Fid%3Dfile_00000000a7b081fda9d7ee22b94d3001%26ts%3D497085%26p%3Dfs%26cid%3D1%26sig%3D81f9e7467685959803e0dd9226a41b45b1d0d13c3269cb514907eaa05f0d06d1%26v%3D0&amp;app=com.google.Chrome&amp;css=2&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=1"></script><script type="text/javascript" nonce="e440df172f4e4210ad1cd5abeb5" src="//local.adguard.org?ts=1789507331733&amp;name=AdGuard%20Extra&amp;type=user-script"></script></head>
+<script type="text/javascript" nonce="e440df172f4e4210ad1cd5abeb5" src="//local.adguard.org?ts=1789507331733&amp;type=content-script&amp;dmn=chatgpt.com&amp;url=https%3A%2F%2Fchatgpt.com%2Fbackend-api%2Festuary%2Fcontent%3Fid%3Dfile_000000002e188230be37ec71c9ca8b74%26ts%3D497085%26p%3Dfs%26cid%3D1%26sig%3D6310a4109cad51f747e9f9f36a2b43f9e337960f03cb0e37c9f35397e1de6598%26v%3D0&amp;app=com.google.Chrome&amp;css=2&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=1"></script><script type="text/javascript" nonce="e440df172f4e4210ad1cd5abeb5" src="//local.adguard.org?ts=1789507331733&amp;name=AdGuard%20Extra&amp;type=user-script"></script></head>
 <body>
 <div class="topbar">
-  <div class="brand">Shift Change • Arizona Envenomation</div>
+  <div class="brand">Arizona Envenomation • EM Shift Change</div>
   <div class="progress"><div id="progressBar"></div></div>
-  <div class="kbd">↓ / Space</div>
+  <button class="btn" onclick="document.body.classList.toggle('notes')">Presenter notes</button>
+  <button class="btn hint">↓ / Space</button>
 </div>
+<nav class="nav" id="nav"></nav>
 
-<nav class="navdots" aria-label="Presentation sections">
-  <a href="#s1" title="Title"></a><a href="#s2" title="Cases"></a><a href="#s3" title="Rattlesnake"></a>
-  <a href="#s4" title="Rattlesnake treatment"></a><a href="#s5" title="Scorpion"></a><a href="#s6" title="Scorpion treatment"></a>
-  <a href="#s7" title="Antivenom"></a><a href="#s8" title="Takeaways"></a><a href="#s9" title="References"></a>
-</nav>
-
-<section id="s1">
-  <div class="wrap">
-    <div class="eyebrow">5-minute emergency medicine teaching point</div>
-    <h1>Arizona<br><span style="color:var(--snake)">Envenomation</span></h1>
-    <p class="lede">Rattlesnake bites and bark scorpion stings: recognizing the moment supportive care becomes <strong>antivenom care</strong>.</p>
-    <div style="margin-top:34px">
-      <span class="pill">Rattlesnake = tissue + blood + systemic</span>
-      <span class="pill">Scorpion = neurotoxicity</span>
-    </div>
+<section>
+<div class="wrap">
+  <div class="eyebrow">Pathophysiology → bedside phenotype → treatment</div>
+  <h1>Arizona<br><span style="color:var(--snake)">Envenomation</span></h1>
+  <p class="lede">Rattlesnakes and the Arizona bark scorpion look like two separate toxicology problems. They become much easier when you understand <strong>what the venom is doing at the molecular level.</strong></p>
+  <div>
+    <span class="pill">Rattlesnake: tissue + hemostasis ± neuro</span>
+    <span class="pill">Scorpion: ion-channel neurotoxicity</span>
   </div>
-  <div class="hero-orb"></div>
+  <div class="note"><strong>Say:</strong> “I want to focus less on memorizing venom trivia and more on why the exam and labs look the way they do — because that tells us when antivenom matters.”</div>
+</div>
 </section>
 
-<section id="s2">
-  <div class="wrap">
-    <div class="eyebrow">Start with two patients</div>
-    <div class="grid two">
-      <div class="card snake">
-        <div class="tag snake">Case 1 • Rattlesnake</div>
-        <div class="big">30-year-old, ankle bite</div>
-        <ul>
-          <li>Pain + 4 cm swelling</li>
-          <li>Normal vital signs</li>
-          <li>Platelets and fibrinogen normal</li>
-          <li>No systemic symptoms</li>
-        </ul>
-      </div>
-      <div class="card scorp">
-        <div class="tag scorp">Case 2 • Scorpion</div>
-        <div class="big">3-year-old, scorpion sting</div>
-        <ul>
-          <li>Drooling</li>
-          <li>Roving eye movements</li>
-          <li>Intermittent jerking</li>
-          <li>Symptoms began within 20 minutes</li>
-        </ul>
+<section>
+<div class="wrap">
+  <div class="eyebrow">Taxonomy • Arizona pit vipers</div>
+  <h2>Who are we actually talking about?</h2>
+  <div class="grid two">
+    <div class="card snake">
+      <div class="tag snake">Family Viperidae → subfamily Crotalinae</div>
+      <div class="big">Genus <em class="tax">Crotalus</em></div>
+      <p>Most medically important Arizona rattlesnakes are in this genus.</p>
+      <div>
+        <span class="pill"><em class="tax">C. atrox</em> — western diamondback</span>
+        <span class="pill"><em class="tax">C. scutulatus</em> — Mohave</span>
+        <span class="pill"><em class="tax">C. cerberus</em> — Arizona black</span>
+        <span class="pill"><em class="tax">C. molossus</em> — black-tailed</span>
+        <span class="pill"><em class="tax">C. tigris</em> — tiger</span>
+        <span class="pill"><em class="tax">C. pyrrhus</em> — speckled</span>
+        <span class="pill"><em class="tax">C. cerastes</em> — sidewinder</span>
       </div>
     </div>
-    <div class="callout">Question for the room: <strong>Who needs antivenom right now?</strong></div>
+    <div class="card">
+      <div class="tag deep">Taxonomy pearl</div>
+      <h3>Not every Arizona rattlesnake is <em class="tax">Crotalus</em>.</h3>
+      <p>The massasauga belongs to genus <em class="tax">Sistrurus</em> (<em class="tax">Sistrurus tergeminus</em>), but clinically it is still a North American crotaline pit-viper problem.</p>
+      <p class="small">Arizona Poison and Drug Information Center lists roughly 15 rattlesnake species/types statewide; habitat and elevation strongly affect distribution.</p>
+    </div>
   </div>
+  <div class="note"><strong>Teaching move:</strong> You do not need species-level identification to treat most bites. Treat the clinical syndrome. Species becomes interesting when discussing venom phenotype — especially <em>C. scutulatus</em>.</div>
+</div>
 </section>
 
-<section id="s3">
-  <div class="wrap">
-    <div class="eyebrow">Rattlesnake</div>
-    <h2>Think: <span style="color:var(--snake)">Tissue + Blood + Systemic</span></h2>
+<section>
+<div class="wrap">
+  <div class="eyebrow">Rattlesnake pathophysiology</div>
+  <h2>Venom is not one toxin.<br>It is a <span style="color:var(--snake)">biochemical cocktail.</span></h2>
+  <div class="path">
+    <div class="node"><div class="molecule">Injection</div><strong>Subcutaneous / tissue venom depot</strong></div>
+    <div class="arrow">→</div>
+    <div class="node"><div class="molecule">Major toxin families</div><strong>SVMPs • PLA₂ • serine proteases • disintegrins • C-type lectins</strong></div>
+    <div class="arrow">→</div>
+    <div class="node"><div class="molecule">Clinical syndrome</div><strong>Edema • hemorrhage • myonecrosis • coagulopathy • thrombocytopenia ± neurotoxicity</strong></div>
+  </div>
+  <div class="callout snake">The bedside phenotype is the sum of several toxin families acting at once — and venom composition varies by species, geography, and even individual snake.</div>
+  <div class="note"><strong>Say:</strong> “This is why snakebite grading systems are imperfect. A patient can have dramatic local injury but little coagulopathy, or profound hematologic toxicity with a less dramatic limb.”</div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+  <div class="eyebrow">Why does the limb swell?</div>
+  <h2>Local injury = <span style="color:var(--snake)">vascular leak + matrix destruction + inflammation</span></h2>
+  <div class="grid three">
+    <div class="card">
+      <div class="tag snake">SVMPs</div>
+      <h3>Snake venom metalloproteinases</h3>
+      <p>Zn²⁺-dependent proteases cleave extracellular matrix and capillary basement membrane proteins.</p>
+      <div class="callout red">→ capillary disruption<br>→ hemorrhage<br>→ edema/ecchymosis</div>
+    </div>
+    <div class="card">
+      <div class="tag snake">PLA₂</div>
+      <h3>Phospholipase A₂</h3>
+      <p>Hydrolyzes membrane phospholipids and amplifies inflammatory injury; some isoforms are myotoxic or neurotoxic.</p>
+      <div class="callout red">→ membrane injury<br>→ myonecrosis<br>→ inflammatory edema</div>
+    </div>
+    <div class="card">
+      <div class="tag snake">Host response</div>
+      <h3>Inflammation amplifies venom injury</h3>
+      <p>Venom activates cytokine and vasoactive pathways, so swelling can extend beyond where intact venom molecules physically started.</p>
+      <div class="callout red">→ pain<br>→ warmth<br>→ expanding edema</div>
+    </div>
+  </div>
+  <div class="note"><strong>Clinical connection:</strong> Marking the leading edge is not cosmetic. Progression of local tissue injury is one of the core antivenom indications.</div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+  <div class="eyebrow">Why do fibrinogen and platelets fall?</div>
+  <h2>Venom-induced coagulopathy is <span style="color:var(--purple)">active toxin physiology</span></h2>
+  <div class="table">
+    <div class="cell head">Venom component</div><div class="cell head">Mechanism</div><div class="cell head">What you see</div>
+    <div class="cell"><strong>Serine proteases / thrombin-like enzymes</strong></div><div class="cell">Alter coagulation and cleave/consume fibrinogen; some activate clotting factors.</div><div class="cell">↓ fibrinogen, ↑ PT/INR, fibrin degradation products</div>
+    <div class="cell"><strong>SVMPs</strong></div><div class="cell">Disrupt vessels and also alter coagulation proteins.</div><div class="cell">Ecchymosis, bleeding + laboratory coagulopathy</div>
+    <div class="cell"><strong>Disintegrins / C-type lectins</strong></div><div class="cell">Interfere with platelet adhesion/aggregation and may promote platelet clearance.</div><div class="cell">Thrombocytopenia + platelet dysfunction</div>
+  </div>
+  <div class="callout"><strong>Pearl:</strong> think “venom-induced consumption coagulopathy,” not simply “DIC.” The mechanism is direct venom action on hemostasis plus vascular injury, not necessarily the diffuse microvascular thrombosis of classic sepsis-associated DIC.</div>
+  <div class="note"><strong>Labs worth trending:</strong> CBC/platelets, PT/INR, fibrinogen. Trend matters more than one isolated value.</div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+  <div class="eyebrow">The neurotoxic exception</div>
+  <h2><em class="tax">Crotalus scutulatus</em>: the “Mohave toxin” story is more complicated than the textbook.</h2>
+  <div class="grid two">
+    <div class="card snake">
+      <div class="tag snake">Mechanism</div>
+      <h3>Mojave toxin</h3>
+      <p>A presynaptic phospholipase A₂ neurotoxin can inhibit acetylcholine release at the neuromuscular junction.</p>
+      <div class="path" style="grid-template-columns:1fr auto 1fr">
+        <div class="node">Presynaptic toxin</div><div class="arrow">→</div><div class="node">↓ ACh release → weakness / paralysis</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="tag deep">2023 registry study</div>
+      <h3>Geography changes the phenotype.</h3>
+      <p>In a 20-patient North American Snakebite Registry series of <em class="tax">C. scutulatus</em> bites, the 9 Arizona patients had local swelling but <strong>no neurologic toxicity</strong>; neurologic effects occurred in 5 of 11 California cases.</p>
+      <p class="small">Translation: “Mohave rattlesnake” does not automatically mean “neurotoxic bite.” Treat what the patient is doing, not the species reputation.</p>
+    </div>
+  </div>
+  <div class="note"><strong>High-yield nuance:</strong> objective neurotoxicity after a crotaline bite is itself an antivenom indication, but Arizona <em>C. scutulatus</em> venom phenotypes may lack Mohave toxin.</div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+  <div class="eyebrow">Snakebite management target</div>
+  <h2>Antivenom is titrated to <span style="color:var(--green)">initial control</span>.</h2>
+  <div class="grid three">
+    <div class="card"><div class="kpi">1</div><h3>Local</h3><p>Progression of swelling/tissue injury stops.</p></div>
+    <div class="card"><div class="kpi">2</div><h3>Hematologic</h3><p>Platelets/coagulation show a clear trend toward improvement.</p></div>
+    <div class="card"><div class="kpi">3</div><h3>Systemic</h3><p>Hypotension, bleeding, or other systemic venom effects resolve.</p></div>
+  </div>
+  <div class="callout snake">Treat the evolving syndrome, not the fang marks.</div>
+  <div class="flow">
+    <div class="step"><div class="num">A</div><div><strong>Progressive local effects</strong> → antivenom.</div></div>
+    <div class="step"><div class="num">B</div><div><strong>Clinically significant hematologic toxicity</strong> → antivenom.</div></div>
+    <div class="step"><div class="num">C</div><div><strong>Systemic toxicity or objective neurotoxicity</strong> → antivenom.</div></div>
+  </div>
+  <div class="note">The 2026 Wilderness Medical Society update specifically includes modern Fab and F(ab′)₂ antivenom management and recommends toxicology/poison-center consultation rather than a rigid “cookbook” approach.</div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+  <div class="eyebrow">A common ED trap</div>
+  <h2>“The limb is huge — is this compartment syndrome?”</h2>
+  <div class="grid two">
+    <div class="card">
+      <div class="tag snake">Why the confusion happens</div>
+      <p>Venom itself produces pain, tense edema, myonecrosis, and impaired movement — all findings that overlap with traumatic compartment syndrome.</p>
+      <div class="callout red">Clinical appearance alone can overcall compartment syndrome.</div>
+    </div>
+    <div class="card">
+      <div class="tag deep">Evidence pearl</div>
+      <p>A 2024 U.S. scoping review found venom-induced compartment syndrome to be relatively rare and emphasized antivenom, objective pressure assessment when needed, serial exams, and toxicology input before fasciotomy.</p>
+      <div class="callout">Antivenom first. Fasciotomy is not reflexive snakebite care.</div>
+    </div>
+  </div>
+  <div class="note"><strong>Why it matters:</strong> fasciotomy in a coagulopathic patient with venom-damaged tissue can add bleeding, infection, and tissue injury.</div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+  <div class="eyebrow">Why Fab vs F(ab′)₂ matters</div>
+  <h2>The pharmacokinetics explain <span style="color:var(--purple)">recurrent hemotoxicity.</span></h2>
+  <div class="grid two">
+    <div class="card snake">
+      <div class="tag snake">CroFab • Fab</div>
+      <h3>Smaller antibody fragment</h3>
+      <p>Effective neutralization, but shorter persistence can allow venom effects to recur after circulating antivenom falls.</p>
+    </div>
+    <div class="card snake">
+      <div class="tag snake">ANAVIP • F(ab′)₂</div>
+      <h3>Larger, longer-lived fragment</h3>
+      <p>Longer plasma persistence provides a pharmacologic rationale for less late/recurrent hemotoxicity.</p>
+    </div>
+  </div>
+  <div class="study"><strong>Bush et al., 2015 — randomized multicenter trial.</strong><p>Late coagulopathy occurred in 29.7% of the Fab/Fab group versus 10.3% with F(ab′)₂ + maintenance and 5.3% with F(ab′)₂ + placebo maintenance.</p></div>
+  <div class="study"><strong>Ruha et al., 2022 — Arizona experience.</strong><p>46 Arizona rattlesnake patients treated with F(ab′)₂: 20% had thrombocytopenia and 35% coagulopathy initially; no clinically significant late hemotoxicity requiring retreatment was observed.</p></div>
+  <div class="note">Do not turn this into “one product is always better.” The useful concept is that antibody-fragment pharmacokinetics help explain recurrence and follow-up strategy.</div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+  <div class="eyebrow">Taxonomy • Arizona scorpion</div>
+  <h2>The dangerous one is <em class="tax">Centruroides sculpturatus</em>.</h2>
+  <div class="grid two">
+    <div class="card scorp">
+      <div class="tag scorp">Family Buthidae</div>
+      <div class="big">Genus <em class="tax">Centruroides</em></div>
+      <p><strong>Species:</strong> <em class="tax">Centruroides sculpturatus</em> — Arizona bark scorpion.</p>
+      <p class="small">Older literature may call it <em class="tax">C. exilicauda</em>.</p>
+    </div>
+    <div class="card">
+      <h3>Arizona context</h3>
+      <p>Arizona has roughly 30 scorpion species, but the Arizona Poison and Drug Information Center identifies <em class="tax">C. sculpturatus</em> as the one capable of life-threatening human envenomation.</p>
+      <div class="callout scorp">Small scorpion. Big neurophysiology.</div>
+    </div>
+  </div>
+  <div class="note">This contrast is worth emphasizing: rattlesnake venom is a multi-organ tissue/hemostatic toxin mixture; bark scorpion venom is primarily a channelopathy.</div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+  <div class="eyebrow">Scorpion pathophysiology</div>
+  <h2>A scorpion sting creates a <span style="color:var(--scorp)">hyperexcitable peripheral nervous system.</span></h2>
+  <div class="grid two">
+    <div class="card scorp">
+      <div class="tag scorp">α-Na⁺ toxins</div>
+      <h3>Delay fast inactivation</h3>
+      <p>Voltage-gated sodium channels stay active longer → prolonged depolarization and repetitive firing.</p>
+    </div>
+    <div class="card scorp">
+      <div class="tag scorp">β-Na⁺ toxins</div>
+      <h3>Shift activation to more negative potentials</h3>
+      <p>Channels activate too easily → neurons fire with less stimulus and can fire spontaneously.</p>
+    </div>
+  </div>
+  <div class="path">
+    <div class="node"><strong>Naᵥ channel toxins</strong></div><div class="arrow">→</div>
+    <div class="node"><strong>Persistent / repetitive action potentials</strong></div><div class="arrow">→</div>
+    <div class="node"><strong>Somatic motor + autonomic + sensory hyperactivity</strong></div>
+  </div>
+  <div class="note"><strong>Classic physiology paper:</strong> purified <em>C. sculpturatus</em> toxins were shown to alter sodium-channel activation/inactivation and cause spontaneous and repetitive axonal firing — exactly the physiology that later appears clinically as fasciculations, agitation, cranial nerve findings, and secretions.</div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+  <div class="eyebrow">Translate the channelopathy to the bedside</div>
+  <h2>Why do they get <span style="color:var(--scorp)">eyes, mouth, and muscles?</span></h2>
+  <div class="grid three">
+    <div class="card scorp"><h3>Eyes / cranial nerves</h3><p>Disconjugate or roving eye movements, nystagmus-like movements, visual disturbance.</p><div class="small">Motor neuron hyperexcitability + cranial neuromuscular dysfunction.</div></div>
+    <div class="card scorp"><h3>Mouth / bulbar-autonomic</h3><p>Hypersalivation, dysphagia, dysarthria, tongue fasciculations, copious secretions.</p><div class="small">Autonomic discharge + bulbar dysfunction.</div></div>
+    <div class="card scorp"><h3>Muscles</h3><p>Fasciculations, jerking, severe neuromotor agitation, loss of coordinated movement.</p><div class="small">Repetitive firing of somatic motor pathways.</div></div>
+  </div>
+  <div class="callout scorp">Respiratory danger comes from secretions, airway dysfunction, disordered motor control, and occasionally pulmonary complications.</div>
+  <div class="note">Children are disproportionately represented in severe cases. A smaller child receives a larger effective venom exposure per body mass and also has less airway/respiratory reserve.</div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+  <div class="eyebrow">Evidence that antivenom changes the physiology</div>
+  <h2>The scorpion trial is a fantastic teaching study.</h2>
+  <div class="card scorp">
+    <div class="tag scorp">Boyer et al. • NEJM 2009 • Arizona</div>
     <div class="grid three">
-      <div class="card"><h3>Local</h3><ul><li>Pain</li><li>Progressive edema</li><li>Ecchymosis / blistering</li></ul></div>
-      <div class="card"><h3>Hematologic</h3><ul><li>Thrombocytopenia</li><li>Low fibrinogen</li><li>Coagulation abnormalities</li></ul></div>
-      <div class="card"><h3>Systemic</h3><ul><li>Hypotension</li><li>Nausea / vomiting</li><li>Neurotoxicity in some venom phenotypes</li></ul></div>
+      <div><div class="kpi">8/8</div><p>antivenom patients had syndrome resolution within 4 hours</p></div>
+      <div><div class="kpi">1/7</div><p>placebo patients had syndrome resolution within 4 hours</p></div>
+      <div><div class="kpi">0.07</div><p>mg/kg mean cumulative midazolam vs <strong>4.61 mg/kg</strong> with placebo</p></div>
     </div>
-    <div class="callout">A bite alone is <em>not</em> the indication. <strong>Progressive envenomation is.</strong></div>
+    <div class="sep"></div>
+    <p>At 1 hour, circulating venom was undetectable in all 8 antivenom recipients, compared with only 1 placebo recipient.</p>
   </div>
+  <div class="callout">This study links <strong>mechanism → venom neutralization → clinical recovery</strong>, which is why it is such a good paper to cite during a 5–10 minute teaching point.</div>
+  <div class="note">Small trial (15 children), but randomized, double-blind, placebo-controlled and performed in the exact disease phenotype we see in Arizona.</div>
+</div>
 </section>
 
-<section id="s4">
-  <div class="wrap">
-    <div class="eyebrow">Rattlesnake management</div>
-    <h2>What am I doing in the first 15 minutes?</h2>
-    <div class="flow">
-      <div class="step"><div class="num">1</div><div><h3>Mark + measure</h3><p>Mark the leading edge of swelling and reassess serially.</p></div></div>
-      <div class="step"><div class="num">2</div><div><h3>Check the blood</h3><p>CBC/platelets, PT/INR, fibrinogen ± additional labs guided by the presentation.</p></div></div>
-      <div class="step"><div class="num">3</div><div><h3>Call Poison Control early</h3><p>Progressive local injury, clinically important hematologic toxicity, or systemic toxicity should trigger antivenom discussion.</p></div></div>
-    </div>
-    <div class="callout warning"><strong>Don’t:</strong> tourniquet • suction • cutting • electrical shock • ice</div>
-    <p class="note">Arizona Poison Control advises observation even after an apparently dry bite because delayed envenomation can occur.</p>
-  </div>
-</section>
-
-<section id="s5">
-  <div class="wrap">
-    <div class="eyebrow">Arizona bark scorpion</div>
-    <h2>Think: <span style="color:var(--scorpion)">Neurotoxicity</span></h2>
-    <div class="compare">
-      <div class="card">
-        <div class="metric">Usually mild</div>
-        <div class="stat">Grade I–II</div>
-        <p>Local pain and paresthesias, sometimes extending away from the sting.</p>
-      </div>
-      <div class="vs">VERSUS</div>
-      <div class="card scorp">
-        <div class="metric">Severe</div>
-        <div class="stat">Grade III–IV</div>
-        <p>Cranial nerve dysfunction, skeletal neuromuscular dysfunction, or both.</p>
-      </div>
-    </div>
-    <div style="margin-top:28px" class="grid three">
-      <div class="card"><h3>Eyes</h3><p>Roving or abnormal eye movements</p></div>
-      <div class="card"><h3>Mouth</h3><p>Drooling, dysarthria, dysphagia, tongue fasciculations</p></div>
-      <div class="card"><h3>Muscles</h3><p>Fasciculations, jerking, marked neuromuscular agitation</p></div>
-    </div>
-  </div>
-</section>
-
-<section id="s6">
-  <div class="wrap">
-    <div class="eyebrow">Scorpion management</div>
-    <h2>The 3-year-old has the answer written all over the exam.</h2>
-    <div class="card scorp" style="max-width:930px">
-      <div class="big">Drooling + roving eyes + jerking</div>
-      <p class="lede" style="margin-bottom:0">That is severe neurotoxicity. Think airway, monitoring, toxicology, and <strong>Anascorp</strong>.</p>
-    </div>
-    <div class="callout">The bedside exam is the key diagnostic test.</div>
-  </div>
-</section>
-
-<section id="s7">
-  <div class="wrap">
-    <div class="eyebrow">Antivenom numbers worth remembering</div>
+<section>
+<div class="wrap">
+  <div class="eyebrow">Real-world Arizona scorpion data</div>
+  <h2>What actually shows up?</h2>
+  <div class="card">
+    <div class="tag deep">Klotz et al. • Am J Med 2021</div>
+    <p>Arizona Poison and Drug Information Center reviewed <strong>4,398 sting calls</strong> from 2017–2019.</p>
     <div class="grid three">
-      <div class="card snake">
-        <div class="tag snake">CroFab</div>
-        <div class="stat">4–6</div>
-        <p><strong>vials IV initially</strong></p>
-        <p class="muted">Repeat until initial control. FDA labeling then recommends 2 vials q6h × 3 after control.</p>
-      </div>
-      <div class="card snake">
-        <div class="tag snake">ANAVIP</div>
-        <div class="stat">10</div>
-        <p><strong>vials IV initially</strong></p>
-        <p class="muted">Repeat 10-vial doses if needed for initial control; 4-vial doses can be used for recurrent toxicity.</p>
-      </div>
-      <div class="card scorp">
-        <div class="tag scorp">Anascorp</div>
-        <div class="stat">3</div>
-        <p><strong>vials IV initially</strong></p>
-        <p class="muted">If clinically important findings persist, give 1 additional vial every 30–60 minutes as needed.</p>
-      </div>
+      <div><div class="kpi">88.9%</div><p>local pain</p></div>
+      <div><div class="kpi">62.2%</div><p>local numbness</p></div>
+      <div><div class="kpi">145</div><p>patients received Anascorp</p></div>
     </div>
-    <p class="note">Use local poison-center/toxicology guidance and the product labeling for the patient in front of you.</p>
+    <p>Among 593 healthcare-facility cases with detailed data: nystagmus 27.5%, hypersalivation 15.3%, and fasciculations 14.8%.</p>
   </div>
+  <div class="note">This is useful after the physiology slide because it shows that the “eyes-mouth-muscles” framework is not just textbook pattern recognition — it matches poison-center data.</div>
+</div>
 </section>
 
-<section id="s8">
-  <div class="wrap center">
-    <div class="eyebrow">The whole talk in 30 seconds</div>
-    <h2>Two patterns. Two triggers.</h2>
-    <div class="grid two" style="text-align:left;margin-top:28px">
-      <div class="card snake">
-        <div class="tag snake">Rattlesnake</div>
-        <div class="big">Progression</div>
-        <p>Swelling progressing?<br>Coagulopathy?<br>Systemic toxicity?</p>
-        <div class="callout" style="border-color:var(--snake)">→ Think antivenom.</div>
-      </div>
-      <div class="card scorp">
-        <div class="tag scorp">Scorpion</div>
-        <div class="big">Neurotoxicity</div>
-        <p>Eyes?<br>Mouth?<br>Muscles?</p>
-        <div class="callout" style="border-color:var(--scorpion)">→ Think Anascorp.</div>
-      </div>
+<section>
+<div class="wrap">
+  <div class="eyebrow">Back to the two patients</div>
+  <div class="grid two">
+    <div class="card snake">
+      <div class="tag snake">Case 1</div>
+      <h3>30-year-old with 4 cm ankle swelling, normal vitals, normal platelets/fibrinogen</h3>
+      <p><strong>Question:</strong> is the swelling progressing?</p>
+      <p>If stable and no systemic or hematologic toxicity → serial exams/labs and observation. If progressing → antivenom.</p>
     </div>
-    <p class="lede" style="margin-top:34px"><strong>Poison Control: 1-800-222-1222</strong></p>
-  </div>
-</section>
-
-<section id="s9">
-  <div class="wrap">
-    <div class="eyebrow">Optional board-style closer</div>
-    <h2>Why does a 3-year-old often receive the same initial vial count as an 80-kg adult?</h2>
-    <div class="card" style="margin-top:30px;max-width:950px">
-      <div class="big">Because you are neutralizing the <span style="color:var(--purple)">venom burden</span>, not dosing a conventional drug by body weight.</div>
-    </div>
-    <div style="margin-top:46px">
-      <div class="eyebrow">References</div>
-      <div class="ref-list">
-        <div class="ref">FDA. CROFAB prescribing information.</div>
-        <div class="ref">FDA. ANAVIP prescribing information.</div>
-        <div class="ref">FDA. Anascorp prescribing information.</div>
-        <div class="ref">Arizona Poison and Drug Information Center. Rattlesnake and scorpion resources; 2026 “News From the Pit” updates.</div>
-      </div>
-      <p class="note">Educational use only. Management should follow the patient’s clinical course, product labeling, toxicology consultation, and local poison-center guidance.</p>
+    <div class="card scorp">
+      <div class="tag scorp">Case 2</div>
+      <h3>3-year-old with drooling, roving eyes, and jerking</h3>
+      <p>This is no longer “a painful sting.” It is a systemic sodium-channel neurotoxicity syndrome.</p>
+      <p><strong>Airway + monitoring + Poison Control/toxicology + Anascorp.</strong></p>
     </div>
   </div>
+  <div class="callout">Same word — “envenomation” — but completely different physiology.</div>
+</div>
 </section>
 
-<footer>Arizona Envenomation • Shift Change Teaching Point • September 15, 2026</footer>
+<section>
+<div class="wrap">
+  <div class="eyebrow">Studies worth naming out loud</div>
+  <h2>If you cite only four papers, use these.</h2>
+
+  <div class="study"><strong>1. Boyer LV et al. NEJM 2009.</strong><p>Randomized, double-blind placebo-controlled trial of scorpion F(ab′)₂ antivenom in 15 critically ill children: 8/8 vs 1/7 clinical resolution by 4 hours.</p></div>
+  <div class="study"><strong>2. Bush SP et al. Clin Toxicol 2015.</strong><p>Prospective blinded randomized multicenter trial: F(ab′)₂ reduced late coagulopathy compared with Fab, supporting the importance of antivenom persistence.</p></div>
+  <div class="study"><strong>3. Greene S et al. Toxicon X 2023.</strong><p>North American Snakebite Registry: striking geographic variation in <em class="tax">C. scutulatus</em> neurotoxicity — an excellent antidote to the “all Mohaves are neurotoxic” simplification.</p></div>
+  <div class="study"><strong>4. Brandehoff N et al. Wilderness Environ Med 2026.</strong><p>The newly updated Wilderness Medical Society North American pit-viper guideline, now incorporating both Fab and F(ab′)₂ antivenom.</p></div>
+
+  <div class="note"><strong>Optional 5th:</strong> Gerardo et al., Ann Emerg Med 2017 — randomized copperhead trial showed better limb function at day 14 with Fab antivenom. Different species, so present it as broader crotalid evidence rather than direct Arizona-rattlesnake evidence.</div>
+</div>
+</section>
+
+<section>
+<div class="wrap center">
+  <div class="eyebrow">Take-home</div>
+  <h2>Follow the physiology.</h2>
+  <div class="grid two" style="text-align:left;margin-top:28px">
+    <div class="card snake">
+      <div class="tag snake">Rattlesnake</div>
+      <div class="big">Proteases + PLA₂ + hemostatic toxins</div>
+      <p>→ progressive tissue injury<br>→ fibrinogen/platelet abnormalities<br>→ systemic toxicity ± neurotoxicity</p>
+      <div class="callout snake">Progression is the treatment trigger.</div>
+    </div>
+    <div class="card scorp">
+      <div class="tag scorp"><em class="tax">Centruroides sculpturatus</em></div>
+      <div class="big">Naᵥ-channel toxins</div>
+      <p>→ repetitive neuronal firing<br>→ eyes + mouth + muscles<br>→ respiratory risk in severe cases</p>
+      <div class="callout scorp">Neuromotor toxicity is the treatment trigger.</div>
+    </div>
+  </div>
+  <p class="lede" style="margin-top:30px"><strong>Poison Control: 1-800-222-1222</strong></p>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+  <div class="eyebrow">References</div>
+  <h2>Core sources</h2>
+  <div class="ref">Brandehoff N, et al. Wilderness Medical Society Clinical Practice Guidelines for the Treatment of Pit Viper Envenomations in the United States and Canada: 2026 Update. <em>Wilderness Environ Med.</em> 2026. DOI: 10.1177/10806032261451823.</div>
+  <div class="ref">Boyer LV, et al. Antivenom for critically ill children with neurotoxicity from scorpion stings. <em>N Engl J Med.</em> 2009;360:2090-2098. DOI: 10.1056/NEJMoa0808455.</div>
+  <div class="ref">Bush SP, et al. Comparison of F(ab′)₂ versus Fab antivenom for pit viper envenomation: a prospective, blinded, multicenter, randomized clinical trial. <em>Clin Toxicol.</em> 2015;53:37-45. DOI: 10.3109/15563650.2014.974263.</div>
+  <div class="ref">Greene S, et al. Geographic variation in the clinical features of Mohave rattlesnake (<em>Crotalus scutulatus</em>) envenomations reported to the North American Snakebite Registry. <em>Toxicon X.</em> 2023;21:100171.</div>
+  <div class="ref">Ruha AM, et al. Early Experience with Crotalidae Immune F(ab′)₂ Antivenom to Treat Arizona Rattlesnake Envenomations. <em>J Med Toxicol.</em> 2022;18:38-42.</div>
+  <div class="ref">Klotz SA, et al. Scorpion Stings and Antivenom Use in Arizona. <em>Am J Med.</em> 2021;134:1034-1038.</div>
+  <div class="ref">Newman J, et al. Compartment Syndrome Following Snake Envenomation in the United States: A Scoping Review of the Clinical Literature. <em>West J Emerg Med.</em> 2024;25:651-660.</div>
+  <div class="ref">Arizona Poison and Drug Information Center. Rattlesnakes of Arizona; Scorpions. Accessed September 15, 2026.</div>
+  <div class="note">This page is for clinician education, not a substitute for patient-specific toxicology consultation or current product labeling.</div>
+</div>
+</section>
 
 <script>
 const sections=[...document.querySelectorAll('section')];
-const dots=[...document.querySelectorAll('.navdots a')];
-const bar=document.getElementById('progressBar');
-
+const nav=document.getElementById('nav');
+sections.forEach((s,i)=>{s.id='s'+(i+1);const a=document.createElement('a');a.href='#'+s.id;a.title='Section '+(i+1);nav.appendChild(a);});
+const dots=[...nav.querySelectorAll('a')], bar=document.getElementById('progressBar');
 function update(){
-  const doc=document.documentElement;
-  const max=doc.scrollHeight-innerHeight;
-  bar.style.width=(max>0 ? (scrollY/max)*100 : 0)+'%';
-  let active=0;
-  sections.forEach((s,i)=>{
-    const r=s.getBoundingClientRect();
-    if(r.top<=innerHeight*.45) active=i;
-  });
-  dots.forEach((d,i)=>d.classList.toggle('active',i===active));
+ const max=document.documentElement.scrollHeight-innerHeight;
+ bar.style.width=(max>0?(scrollY/max)*100:0)+'%';
+ let active=0; sections.forEach((s,i)=>{if(s.getBoundingClientRect().top<=innerHeight*.44)active=i});
+ dots.forEach((d,i)=>d.classList.toggle('active',i===active));
 }
-addEventListener('scroll',update,{passive:true});
-addEventListener('resize',update);
-update();
-
-addEventListener('keydown',(e)=>{
-  if(['ArrowDown','PageDown',' '].includes(e.key)){
-    e.preventDefault();
-    const idx=Math.min(sections.length-1, sections.findIndex(s=>s.getBoundingClientRect().top>20));
-    (sections[idx>=0?idx:sections.length-1]).scrollIntoView({behavior:'smooth'});
-  }
-  if(['ArrowUp','PageUp'].includes(e.key)){
-    e.preventDefault();
-    let idx=0;
-    sections.forEach((s,i)=>{ if(s.getBoundingClientRect().top < -20) idx=i; });
-    sections[Math.max(0,idx)].scrollIntoView({behavior:'smooth'});
-  }
+addEventListener('scroll',update,{passive:true});addEventListener('resize',update);update();
+addEventListener('keydown',e=>{
+ if(['ArrowDown','PageDown',' '].includes(e.key)){e.preventDefault();let n=sections.findIndex(s=>s.getBoundingClientRect().top>25);if(n<0)n=sections.length-1;sections[n].scrollIntoView({behavior:'smooth'});}
+ if(['ArrowUp','PageUp'].includes(e.key)){e.preventDefault();let n=0;sections.forEach((s,i)=>{if(s.getBoundingClientRect().top<-25)n=i});sections[Math.max(0,n)].scrollIntoView({behavior:'smooth'});}
+ if(e.key.toLowerCase()==='n')document.body.classList.toggle('notes');
 });
 </script>
 </body>
