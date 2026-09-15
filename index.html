@@ -1,10 +1,11 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Arizona Envenomation — Pathophysiology & ED Management</title>
-<meta name="theme-color" content="#07111f">
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>Arizona Envenomation — Pathophysiology &amp; ED Management</title>
+<meta content="#07111f" name="theme-color"/>
 <style>
 :root{
   --bg:#07111f; --bg2:#0b1728; --panel:rgba(255,255,255,.075); --line:rgba(255,255,255,.14);
@@ -81,374 +82,374 @@ body.notes .note{display:block}
   section{padding:82px 19px 45px}.two,.three,.path{grid-template-columns:1fr}.arrow{transform:rotate(90deg)}.table{grid-template-columns:1fr}.cell{border-right:none}.head{display:none}.nav{display:none}.btn.hint{display:none}
 }
 @media print{.topbar,.nav{display:none}section{min-height:auto;page-break-after:always;padding:30px}.card{box-shadow:none}.note{display:block}}
+
+.discussion{
+  margin:0 0 24px;
+  border:1px solid rgba(117,229,168,.32);
+  background:linear-gradient(180deg,rgba(117,229,168,.10),rgba(117,229,168,.045));
+  border-radius:20px;
+  padding:17px 19px;
+  box-shadow:inset 0 0 0 1px rgba(117,229,168,.035);
+}
+.discussion .q-label{
+  display:flex;align-items:center;gap:9px;
+  color:var(--green);font-size:11px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;
+  margin-bottom:7px;
+}
+.discussion .q-label:before{
+  content:"?";width:23px;height:23px;border-radius:999px;border:1px solid rgba(117,229,168,.5);
+  display:grid;place-items:center;font-size:13px;
+}
+.discussion .q-text{
+  font-size:clamp(18px,1.8vw,25px);line-height:1.4;font-weight:720;color:#f0f6f4;
+}
 </style>
-<script type="text/javascript" nonce="e440df172f4e4210ad1cd5abeb5" src="//local.adguard.org?ts=1789507331733&amp;type=content-script&amp;dmn=chatgpt.com&amp;url=https%3A%2F%2Fchatgpt.com%2Fbackend-api%2Festuary%2Fcontent%3Fid%3Dfile_000000002e188230be37ec71c9ca8b74%26ts%3D497085%26p%3Dfs%26cid%3D1%26sig%3D6310a4109cad51f747e9f9f36a2b43f9e337960f03cb0e37c9f35397e1de6598%26v%3D0&amp;app=com.google.Chrome&amp;css=2&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=1"></script><script type="text/javascript" nonce="e440df172f4e4210ad1cd5abeb5" src="//local.adguard.org?ts=1789507331733&amp;name=AdGuard%20Extra&amp;type=user-script"></script></head>
+<script type="text/javascript" nonce="e440df172f4e4210ad1cd5abeb5" src="//local.adguard.org?ts=1789507331733&amp;type=content-script&amp;dmn=chatgpt.com&amp;url=https%3A%2F%2Fchatgpt.com%2Fbackend-api%2Festuary%2Fcontent%3Fid%3Dfile_00000000f97c81fda2802637879d001e%26ts%3D497085%26p%3Dfs%26cid%3D1%26sig%3Dffb172cd4e9ca593ba4531b448574502969970de25579854caf5b5738c159dc6%26v%3D0&amp;app=com.google.Chrome&amp;css=2&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=1"></script><script type="text/javascript" nonce="e440df172f4e4210ad1cd5abeb5" src="//local.adguard.org?ts=1789507331733&amp;name=AdGuard%20Extra&amp;type=user-script"></script></head>
 <body>
 <div class="topbar">
-  <div class="brand">Arizona Envenomation • EM Shift Change</div>
-  <div class="progress"><div id="progressBar"></div></div>
-  <button class="btn" onclick="document.body.classList.toggle('notes')">Presenter notes</button>
-  <button class="btn hint">↓ / Space</button>
+<div class="brand">Arizona Envenomation • EM Shift Change</div>
+<div class="progress"><div id="progressBar"></div></div>
+<button class="btn" onclick="document.body.classList.toggle('notes')">Presenter notes</button>
+<button class="btn hint">↓ / Space</button>
 </div>
 <nav class="nav" id="nav"></nav>
-
 <section>
 <div class="wrap">
-  <div class="eyebrow">Pathophysiology → bedside phenotype → treatment</div>
-  <h1>Arizona<br><span style="color:var(--snake)">Envenomation</span></h1>
-  <p class="lede">Rattlesnakes and the Arizona bark scorpion look like two separate toxicology problems. They become much easier when you understand <strong>what the venom is doing at the molecular level.</strong></p>
-  <div>
-    <span class="pill">Rattlesnake: tissue + hemostasis ± neuro</span>
-    <span class="pill">Scorpion: ion-channel neurotoxicity</span>
-  </div>
-  <div class="note"><strong>Say:</strong> “I want to focus less on memorizing venom trivia and more on why the exam and labs look the way they do — because that tells us when antivenom matters.”</div>
+<div class="eyebrow">Pathophysiology → bedside phenotype → treatment</div><div class="discussion"><div class="q-label">Discussion question</div><div class="q-text">Before we start: what single physiologic difference best separates rattlesnake envenomation from bark scorpion envenomation?</div></div>
+<h1>Arizona<br/><span style="color:var(--snake)">Envenomation</span></h1>
+<p class="lede">Rattlesnakes and the Arizona bark scorpion look like two separate toxicology problems. They become much easier when you understand <strong>what the venom is doing at the molecular level.</strong></p>
+<div>
+<span class="pill">Rattlesnake: tissue + hemostasis ± neuro</span>
+<span class="pill">Scorpion: ion-channel neurotoxicity</span>
+</div>
+<div class="note"><strong>Say:</strong> “I want to focus less on memorizing venom trivia and more on why the exam and labs look the way they do — because that tells us when antivenom matters.”</div>
 </div>
 </section>
-
 <section>
 <div class="wrap">
-  <div class="eyebrow">Taxonomy • Arizona pit vipers</div>
-  <h2>Who are we actually talking about?</h2>
-  <div class="grid two">
-    <div class="card snake">
-      <div class="tag snake">Family Viperidae → subfamily Crotalinae</div>
-      <div class="big">Genus <em class="tax">Crotalus</em></div>
-      <p>Most medically important Arizona rattlesnakes are in this genus.</p>
-      <div>
-        <span class="pill"><em class="tax">C. atrox</em> — western diamondback</span>
-        <span class="pill"><em class="tax">C. scutulatus</em> — Mohave</span>
-        <span class="pill"><em class="tax">C. cerberus</em> — Arizona black</span>
-        <span class="pill"><em class="tax">C. molossus</em> — black-tailed</span>
-        <span class="pill"><em class="tax">C. tigris</em> — tiger</span>
-        <span class="pill"><em class="tax">C. pyrrhus</em> — speckled</span>
-        <span class="pill"><em class="tax">C. cerastes</em> — sidewinder</span>
-      </div>
-    </div>
-    <div class="card">
-      <div class="tag deep">Taxonomy pearl</div>
-      <h3>Not every Arizona rattlesnake is <em class="tax">Crotalus</em>.</h3>
-      <p>The massasauga belongs to genus <em class="tax">Sistrurus</em> (<em class="tax">Sistrurus tergeminus</em>), but clinically it is still a North American crotaline pit-viper problem.</p>
-      <p class="small">Arizona Poison and Drug Information Center lists roughly 15 rattlesnake species/types statewide; habitat and elevation strongly affect distribution.</p>
-    </div>
-  </div>
-  <div class="note"><strong>Teaching move:</strong> You do not need species-level identification to treat most bites. Treat the clinical syndrome. Species becomes interesting when discussing venom phenotype — especially <em>C. scutulatus</em>.</div>
+<div class="eyebrow">Taxonomy • Arizona pit vipers</div><div class="discussion"><div class="q-label">Discussion question</div><div class="q-text">If you had to treat before you knew the exact species, how much would species identification actually change your immediate ED management?</div></div>
+<h2>Who are we actually talking about?</h2>
+<div class="grid two">
+<div class="card snake">
+<div class="tag snake">Family Viperidae → subfamily Crotalinae</div>
+<div class="big">Genus <em class="tax">Crotalus</em></div>
+<p>Most medically important Arizona rattlesnakes are in this genus.</p>
+<div>
+<span class="pill"><em class="tax">C. atrox</em> — western diamondback</span>
+<span class="pill"><em class="tax">C. scutulatus</em> — Mohave</span>
+<span class="pill"><em class="tax">C. cerberus</em> — Arizona black</span>
+<span class="pill"><em class="tax">C. molossus</em> — black-tailed</span>
+<span class="pill"><em class="tax">C. tigris</em> — tiger</span>
+<span class="pill"><em class="tax">C. pyrrhus</em> — speckled</span>
+<span class="pill"><em class="tax">C. cerastes</em> — sidewinder</span>
+</div>
+</div>
+<div class="card">
+<div class="tag deep">Taxonomy pearl</div>
+<h3>Not every Arizona rattlesnake is <em class="tax">Crotalus</em>.</h3>
+<p>The massasauga belongs to genus <em class="tax">Sistrurus</em> (<em class="tax">Sistrurus tergeminus</em>), but clinically it is still a North American crotaline pit-viper problem.</p>
+<p class="small">Arizona Poison and Drug Information Center lists roughly 15 rattlesnake species/types statewide; habitat and elevation strongly affect distribution.</p>
+</div>
+</div>
+<div class="note"><strong>Teaching move:</strong> You do not need species-level identification to treat most bites. Treat the clinical syndrome. Species becomes interesting when discussing venom phenotype — especially <em>C. scutulatus</em>.</div>
 </div>
 </section>
-
 <section>
 <div class="wrap">
-  <div class="eyebrow">Rattlesnake pathophysiology</div>
-  <h2>Venom is not one toxin.<br>It is a <span style="color:var(--snake)">biochemical cocktail.</span></h2>
-  <div class="path">
-    <div class="node"><div class="molecule">Injection</div><strong>Subcutaneous / tissue venom depot</strong></div>
-    <div class="arrow">→</div>
-    <div class="node"><div class="molecule">Major toxin families</div><strong>SVMPs • PLA₂ • serine proteases • disintegrins • C-type lectins</strong></div>
-    <div class="arrow">→</div>
-    <div class="node"><div class="molecule">Clinical syndrome</div><strong>Edema • hemorrhage • myonecrosis • coagulopathy • thrombocytopenia ± neurotoxicity</strong></div>
-  </div>
-  <div class="callout snake">The bedside phenotype is the sum of several toxin families acting at once — and venom composition varies by species, geography, and even individual snake.</div>
-  <div class="note"><strong>Say:</strong> “This is why snakebite grading systems are imperfect. A patient can have dramatic local injury but little coagulopathy, or profound hematologic toxicity with a less dramatic limb.”</div>
+<div class="eyebrow">Rattlesnake pathophysiology</div><div class="discussion"><div class="q-label">Discussion question</div><div class="q-text">Why can two rattlesnake bites produce very different combinations of swelling, coagulopathy, and neurologic findings?</div></div>
+<h2>Venom is not one toxin.<br/>It is a <span style="color:var(--snake)">biochemical cocktail.</span></h2>
+<div class="path">
+<div class="node"><div class="molecule">Injection</div><strong>Subcutaneous / tissue venom depot</strong></div>
+<div class="arrow">→</div>
+<div class="node"><div class="molecule">Major toxin families</div><strong>SVMPs • PLA₂ • serine proteases • disintegrins • C-type lectins</strong></div>
+<div class="arrow">→</div>
+<div class="node"><div class="molecule">Clinical syndrome</div><strong>Edema • hemorrhage • myonecrosis • coagulopathy • thrombocytopenia ± neurotoxicity</strong></div>
+</div>
+<div class="callout snake">The bedside phenotype is the sum of several toxin families acting at once — and venom composition varies by species, geography, and even individual snake.</div>
+<div class="note"><strong>Say:</strong> “This is why snakebite grading systems are imperfect. A patient can have dramatic local injury but little coagulopathy, or profound hematologic toxicity with a less dramatic limb.”</div>
 </div>
 </section>
-
 <section>
 <div class="wrap">
-  <div class="eyebrow">Why does the limb swell?</div>
-  <h2>Local injury = <span style="color:var(--snake)">vascular leak + matrix destruction + inflammation</span></h2>
-  <div class="grid three">
-    <div class="card">
-      <div class="tag snake">SVMPs</div>
-      <h3>Snake venom metalloproteinases</h3>
-      <p>Zn²⁺-dependent proteases cleave extracellular matrix and capillary basement membrane proteins.</p>
-      <div class="callout red">→ capillary disruption<br>→ hemorrhage<br>→ edema/ecchymosis</div>
-    </div>
-    <div class="card">
-      <div class="tag snake">PLA₂</div>
-      <h3>Phospholipase A₂</h3>
-      <p>Hydrolyzes membrane phospholipids and amplifies inflammatory injury; some isoforms are myotoxic or neurotoxic.</p>
-      <div class="callout red">→ membrane injury<br>→ myonecrosis<br>→ inflammatory edema</div>
-    </div>
-    <div class="card">
-      <div class="tag snake">Host response</div>
-      <h3>Inflammation amplifies venom injury</h3>
-      <p>Venom activates cytokine and vasoactive pathways, so swelling can extend beyond where intact venom molecules physically started.</p>
-      <div class="callout red">→ pain<br>→ warmth<br>→ expanding edema</div>
-    </div>
-  </div>
-  <div class="note"><strong>Clinical connection:</strong> Marking the leading edge is not cosmetic. Progression of local tissue injury is one of the core antivenom indications.</div>
+<div class="eyebrow">Why does the limb swell?</div><div class="discussion"><div class="q-label">Discussion question</div><div class="q-text">What venom effect best explains rapidly expanding edema without requiring infection or a true compartment syndrome?</div></div>
+<h2>Local injury = <span style="color:var(--snake)">vascular leak + matrix destruction + inflammation</span></h2>
+<div class="grid three">
+<div class="card">
+<div class="tag snake">SVMPs</div>
+<h3>Snake venom metalloproteinases</h3>
+<p>Zn²⁺-dependent proteases cleave extracellular matrix and capillary basement membrane proteins.</p>
+<div class="callout red">→ capillary disruption<br/>→ hemorrhage<br/>→ edema/ecchymosis</div>
+</div>
+<div class="card">
+<div class="tag snake">PLA₂</div>
+<h3>Phospholipase A₂</h3>
+<p>Hydrolyzes membrane phospholipids and amplifies inflammatory injury; some isoforms are myotoxic or neurotoxic.</p>
+<div class="callout red">→ membrane injury<br/>→ myonecrosis<br/>→ inflammatory edema</div>
+</div>
+<div class="card">
+<div class="tag snake">Host response</div>
+<h3>Inflammation amplifies venom injury</h3>
+<p>Venom activates cytokine and vasoactive pathways, so swelling can extend beyond where intact venom molecules physically started.</p>
+<div class="callout red">→ pain<br/>→ warmth<br/>→ expanding edema</div>
+</div>
+</div>
+<div class="note"><strong>Clinical connection:</strong> Marking the leading edge is not cosmetic. Progression of local tissue injury is one of the core antivenom indications.</div>
 </div>
 </section>
-
 <section>
 <div class="wrap">
-  <div class="eyebrow">Why do fibrinogen and platelets fall?</div>
-  <h2>Venom-induced coagulopathy is <span style="color:var(--purple)">active toxin physiology</span></h2>
-  <div class="table">
-    <div class="cell head">Venom component</div><div class="cell head">Mechanism</div><div class="cell head">What you see</div>
-    <div class="cell"><strong>Serine proteases / thrombin-like enzymes</strong></div><div class="cell">Alter coagulation and cleave/consume fibrinogen; some activate clotting factors.</div><div class="cell">↓ fibrinogen, ↑ PT/INR, fibrin degradation products</div>
-    <div class="cell"><strong>SVMPs</strong></div><div class="cell">Disrupt vessels and also alter coagulation proteins.</div><div class="cell">Ecchymosis, bleeding + laboratory coagulopathy</div>
-    <div class="cell"><strong>Disintegrins / C-type lectins</strong></div><div class="cell">Interfere with platelet adhesion/aggregation and may promote platelet clearance.</div><div class="cell">Thrombocytopenia + platelet dysfunction</div>
-  </div>
-  <div class="callout"><strong>Pearl:</strong> think “venom-induced consumption coagulopathy,” not simply “DIC.” The mechanism is direct venom action on hemostasis plus vascular injury, not necessarily the diffuse microvascular thrombosis of classic sepsis-associated DIC.</div>
-  <div class="note"><strong>Labs worth trending:</strong> CBC/platelets, PT/INR, fibrinogen. Trend matters more than one isolated value.</div>
+<div class="eyebrow">Why do fibrinogen and platelets fall?</div><div class="discussion"><div class="q-label">Discussion question</div><div class="q-text">If the fibrinogen is falling and the INR is rising, what is the venom actually doing to the coagulation system?</div></div>
+<h2>Venom-induced coagulopathy is <span style="color:var(--purple)">active toxin physiology</span></h2>
+<div class="table">
+<div class="cell head">Venom component</div><div class="cell head">Mechanism</div><div class="cell head">What you see</div>
+<div class="cell"><strong>Serine proteases / thrombin-like enzymes</strong></div><div class="cell">Alter coagulation and cleave/consume fibrinogen; some activate clotting factors.</div><div class="cell">↓ fibrinogen, ↑ PT/INR, fibrin degradation products</div>
+<div class="cell"><strong>SVMPs</strong></div><div class="cell">Disrupt vessels and also alter coagulation proteins.</div><div class="cell">Ecchymosis, bleeding + laboratory coagulopathy</div>
+<div class="cell"><strong>Disintegrins / C-type lectins</strong></div><div class="cell">Interfere with platelet adhesion/aggregation and may promote platelet clearance.</div><div class="cell">Thrombocytopenia + platelet dysfunction</div>
+</div>
+<div class="callout"><strong>Pearl:</strong> think “venom-induced consumption coagulopathy,” not simply “DIC.” The mechanism is direct venom action on hemostasis plus vascular injury, not necessarily the diffuse microvascular thrombosis of classic sepsis-associated DIC.</div>
+<div class="note"><strong>Labs worth trending:</strong> CBC/platelets, PT/INR, fibrinogen. Trend matters more than one isolated value.</div>
 </div>
 </section>
-
 <section>
 <div class="wrap">
-  <div class="eyebrow">The neurotoxic exception</div>
-  <h2><em class="tax">Crotalus scutulatus</em>: the “Mohave toxin” story is more complicated than the textbook.</h2>
-  <div class="grid two">
-    <div class="card snake">
-      <div class="tag snake">Mechanism</div>
-      <h3>Mojave toxin</h3>
-      <p>A presynaptic phospholipase A₂ neurotoxin can inhibit acetylcholine release at the neuromuscular junction.</p>
-      <div class="path" style="grid-template-columns:1fr auto 1fr">
-        <div class="node">Presynaptic toxin</div><div class="arrow">→</div><div class="node">↓ ACh release → weakness / paralysis</div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="tag deep">2023 registry study</div>
-      <h3>Geography changes the phenotype.</h3>
-      <p>In a 20-patient North American Snakebite Registry series of <em class="tax">C. scutulatus</em> bites, the 9 Arizona patients had local swelling but <strong>no neurologic toxicity</strong>; neurologic effects occurred in 5 of 11 California cases.</p>
-      <p class="small">Translation: “Mohave rattlesnake” does not automatically mean “neurotoxic bite.” Treat what the patient is doing, not the species reputation.</p>
-    </div>
-  </div>
-  <div class="note"><strong>High-yield nuance:</strong> objective neurotoxicity after a crotaline bite is itself an antivenom indication, but Arizona <em>C. scutulatus</em> venom phenotypes may lack Mohave toxin.</div>
+<div class="eyebrow">The neurotoxic exception</div><div class="discussion"><div class="q-label">Discussion question</div><div class="q-text">If someone says “Mohave rattlesnake equals neurotoxic bite,” what would make you push back on that statement?</div></div>
+<h2><em class="tax">Crotalus scutulatus</em>: the “Mohave toxin” story is more complicated than the textbook.</h2>
+<div class="grid two">
+<div class="card snake">
+<div class="tag snake">Mechanism</div>
+<h3>Mojave toxin</h3>
+<p>A presynaptic phospholipase A₂ neurotoxin can inhibit acetylcholine release at the neuromuscular junction.</p>
+<div class="path" style="grid-template-columns:1fr auto 1fr">
+<div class="node">Presynaptic toxin</div><div class="arrow">→</div><div class="node">↓ ACh release → weakness / paralysis</div>
+</div>
+</div>
+<div class="card">
+<div class="tag deep">2023 registry study</div>
+<h3>Geography changes the phenotype.</h3>
+<p>In a 20-patient North American Snakebite Registry series of <em class="tax">C. scutulatus</em> bites, the 9 Arizona patients had local swelling but <strong>no neurologic toxicity</strong>; neurologic effects occurred in 5 of 11 California cases.</p>
+<p class="small">Translation: “Mohave rattlesnake” does not automatically mean “neurotoxic bite.” Treat what the patient is doing, not the species reputation.</p>
+</div>
+</div>
+<div class="note"><strong>High-yield nuance:</strong> objective neurotoxicity after a crotaline bite is itself an antivenom indication, but Arizona <em>C. scutulatus</em> venom phenotypes may lack Mohave toxin.</div>
 </div>
 </section>
-
 <section>
 <div class="wrap">
-  <div class="eyebrow">Snakebite management target</div>
-  <h2>Antivenom is titrated to <span style="color:var(--green)">initial control</span>.</h2>
-  <div class="grid three">
-    <div class="card"><div class="kpi">1</div><h3>Local</h3><p>Progression of swelling/tissue injury stops.</p></div>
-    <div class="card"><div class="kpi">2</div><h3>Hematologic</h3><p>Platelets/coagulation show a clear trend toward improvement.</p></div>
-    <div class="card"><div class="kpi">3</div><h3>Systemic</h3><p>Hypotension, bleeding, or other systemic venom effects resolve.</p></div>
-  </div>
-  <div class="callout snake">Treat the evolving syndrome, not the fang marks.</div>
-  <div class="flow">
-    <div class="step"><div class="num">A</div><div><strong>Progressive local effects</strong> → antivenom.</div></div>
-    <div class="step"><div class="num">B</div><div><strong>Clinically significant hematologic toxicity</strong> → antivenom.</div></div>
-    <div class="step"><div class="num">C</div><div><strong>Systemic toxicity or objective neurotoxicity</strong> → antivenom.</div></div>
-  </div>
-  <div class="note">The 2026 Wilderness Medical Society update specifically includes modern Fab and F(ab′)₂ antivenom management and recommends toxicology/poison-center consultation rather than a rigid “cookbook” approach.</div>
+<div class="eyebrow">Snakebite management target</div><div class="discussion"><div class="q-label">Discussion question</div><div class="q-text">What does “initial control” of rattlesnake envenomation actually mean at the bedside?</div></div>
+<h2>Antivenom is titrated to <span style="color:var(--green)">initial control</span>.</h2>
+<div class="grid three">
+<div class="card"><div class="kpi">1</div><h3>Local</h3><p>Progression of swelling/tissue injury stops.</p></div>
+<div class="card"><div class="kpi">2</div><h3>Hematologic</h3><p>Platelets/coagulation show a clear trend toward improvement.</p></div>
+<div class="card"><div class="kpi">3</div><h3>Systemic</h3><p>Hypotension, bleeding, or other systemic venom effects resolve.</p></div>
+</div>
+<div class="callout snake">Treat the evolving syndrome, not the fang marks.</div>
+<div class="flow">
+<div class="step"><div class="num">A</div><div><strong>Progressive local effects</strong> → antivenom.</div></div>
+<div class="step"><div class="num">B</div><div><strong>Clinically significant hematologic toxicity</strong> → antivenom.</div></div>
+<div class="step"><div class="num">C</div><div><strong>Systemic toxicity or objective neurotoxicity</strong> → antivenom.</div></div>
+</div>
+<div class="note">The 2026 Wilderness Medical Society update specifically includes modern Fab and F(ab′)₂ antivenom management and recommends toxicology/poison-center consultation rather than a rigid “cookbook” approach.</div>
 </div>
 </section>
-
 <section>
 <div class="wrap">
-  <div class="eyebrow">A common ED trap</div>
-  <h2>“The limb is huge — is this compartment syndrome?”</h2>
-  <div class="grid two">
-    <div class="card">
-      <div class="tag snake">Why the confusion happens</div>
-      <p>Venom itself produces pain, tense edema, myonecrosis, and impaired movement — all findings that overlap with traumatic compartment syndrome.</p>
-      <div class="callout red">Clinical appearance alone can overcall compartment syndrome.</div>
-    </div>
-    <div class="card">
-      <div class="tag deep">Evidence pearl</div>
-      <p>A 2024 U.S. scoping review found venom-induced compartment syndrome to be relatively rare and emphasized antivenom, objective pressure assessment when needed, serial exams, and toxicology input before fasciotomy.</p>
-      <div class="callout">Antivenom first. Fasciotomy is not reflexive snakebite care.</div>
-    </div>
-  </div>
-  <div class="note"><strong>Why it matters:</strong> fasciotomy in a coagulopathic patient with venom-damaged tissue can add bleeding, infection, and tissue injury.</div>
+<div class="eyebrow">A common ED trap</div><div class="discussion"><div class="q-label">Discussion question</div><div class="q-text">A swollen, tense extremity after rattlesnake bite looks like compartment syndrome. What should happen before anyone reaches for a scalpel?</div></div>
+<h2>“The limb is huge — is this compartment syndrome?”</h2>
+<div class="grid two">
+<div class="card">
+<div class="tag snake">Why the confusion happens</div>
+<p>Venom itself produces pain, tense edema, myonecrosis, and impaired movement — all findings that overlap with traumatic compartment syndrome.</p>
+<div class="callout red">Clinical appearance alone can overcall compartment syndrome.</div>
+</div>
+<div class="card">
+<div class="tag deep">Evidence pearl</div>
+<p>A 2024 U.S. scoping review found venom-induced compartment syndrome to be relatively rare and emphasized antivenom, objective pressure assessment when needed, serial exams, and toxicology input before fasciotomy.</p>
+<div class="callout">Antivenom first. Fasciotomy is not reflexive snakebite care.</div>
+</div>
+</div>
+<div class="note"><strong>Why it matters:</strong> fasciotomy in a coagulopathic patient with venom-damaged tissue can add bleeding, infection, and tissue injury.</div>
 </div>
 </section>
-
 <section>
 <div class="wrap">
-  <div class="eyebrow">Why Fab vs F(ab′)₂ matters</div>
-  <h2>The pharmacokinetics explain <span style="color:var(--purple)">recurrent hemotoxicity.</span></h2>
-  <div class="grid two">
-    <div class="card snake">
-      <div class="tag snake">CroFab • Fab</div>
-      <h3>Smaller antibody fragment</h3>
-      <p>Effective neutralization, but shorter persistence can allow venom effects to recur after circulating antivenom falls.</p>
-    </div>
-    <div class="card snake">
-      <div class="tag snake">ANAVIP • F(ab′)₂</div>
-      <h3>Larger, longer-lived fragment</h3>
-      <p>Longer plasma persistence provides a pharmacologic rationale for less late/recurrent hemotoxicity.</p>
-    </div>
-  </div>
-  <div class="study"><strong>Bush et al., 2015 — randomized multicenter trial.</strong><p>Late coagulopathy occurred in 29.7% of the Fab/Fab group versus 10.3% with F(ab′)₂ + maintenance and 5.3% with F(ab′)₂ + placebo maintenance.</p></div>
-  <div class="study"><strong>Ruha et al., 2022 — Arizona experience.</strong><p>46 Arizona rattlesnake patients treated with F(ab′)₂: 20% had thrombocytopenia and 35% coagulopathy initially; no clinically significant late hemotoxicity requiring retreatment was observed.</p></div>
-  <div class="note">Do not turn this into “one product is always better.” The useful concept is that antibody-fragment pharmacokinetics help explain recurrence and follow-up strategy.</div>
+<div class="eyebrow">Why Fab vs F(ab′)₂ matters</div><div class="discussion"><div class="q-label">Discussion question</div><div class="q-text">Why might one antivenom be more likely than another to prevent recurrent hematologic toxicity after the initial symptoms improve?</div></div>
+<h2>The pharmacokinetics explain <span style="color:var(--purple)">recurrent hemotoxicity.</span></h2>
+<div class="grid two">
+<div class="card snake">
+<div class="tag snake">CroFab • Fab</div>
+<h3>Smaller antibody fragment</h3>
+<p>Effective neutralization, but shorter persistence can allow venom effects to recur after circulating antivenom falls.</p>
+</div>
+<div class="card snake">
+<div class="tag snake">ANAVIP • F(ab′)₂</div>
+<h3>Larger, longer-lived fragment</h3>
+<p>Longer plasma persistence provides a pharmacologic rationale for less late/recurrent hemotoxicity.</p>
+</div>
+</div>
+<div class="study"><strong>Bush et al., 2015 — randomized multicenter trial.</strong><p>Late coagulopathy occurred in 29.7% of the Fab/Fab group versus 10.3% with F(ab′)₂ + maintenance and 5.3% with F(ab′)₂ + placebo maintenance.</p></div>
+<div class="study"><strong>Ruha et al., 2022 — Arizona experience.</strong><p>46 Arizona rattlesnake patients treated with F(ab′)₂: 20% had thrombocytopenia and 35% coagulopathy initially; no clinically significant late hemotoxicity requiring retreatment was observed.</p></div>
+<div class="note">Do not turn this into “one product is always better.” The useful concept is that antibody-fragment pharmacokinetics help explain recurrence and follow-up strategy.</div>
 </div>
 </section>
-
 <section>
 <div class="wrap">
-  <div class="eyebrow">Taxonomy • Arizona scorpion</div>
-  <h2>The dangerous one is <em class="tax">Centruroides sculpturatus</em>.</h2>
-  <div class="grid two">
-    <div class="card scorp">
-      <div class="tag scorp">Family Buthidae</div>
-      <div class="big">Genus <em class="tax">Centruroides</em></div>
-      <p><strong>Species:</strong> <em class="tax">Centruroides sculpturatus</em> — Arizona bark scorpion.</p>
-      <p class="small">Older literature may call it <em class="tax">C. exilicauda</em>.</p>
-    </div>
-    <div class="card">
-      <h3>Arizona context</h3>
-      <p>Arizona has roughly 30 scorpion species, but the Arizona Poison and Drug Information Center identifies <em class="tax">C. sculpturatus</em> as the one capable of life-threatening human envenomation.</p>
-      <div class="callout scorp">Small scorpion. Big neurophysiology.</div>
-    </div>
-  </div>
-  <div class="note">This contrast is worth emphasizing: rattlesnake venom is a multi-organ tissue/hemostatic toxin mixture; bark scorpion venom is primarily a channelopathy.</div>
+<div class="eyebrow">Taxonomy • Arizona scorpion</div><div class="discussion"><div class="q-label">Discussion question</div><div class="q-text">Why is Centruroides sculpturatus the scorpion species we care most about in Arizona?</div></div>
+<h2>The dangerous one is <em class="tax">Centruroides sculpturatus</em>.</h2>
+<div class="grid two">
+<div class="card scorp">
+<div class="tag scorp">Family Buthidae</div>
+<div class="big">Genus <em class="tax">Centruroides</em></div>
+<p><strong>Species:</strong> <em class="tax">Centruroides sculpturatus</em> — Arizona bark scorpion.</p>
+<p class="small">Older literature may call it <em class="tax">C. exilicauda</em>.</p>
+</div>
+<div class="card">
+<h3>Arizona context</h3>
+<p>Arizona has roughly 30 scorpion species, but the Arizona Poison and Drug Information Center identifies <em class="tax">C. sculpturatus</em> as the one capable of life-threatening human envenomation.</p>
+<div class="callout scorp">Small scorpion. Big neurophysiology.</div>
+</div>
+</div>
+<div class="note">This contrast is worth emphasizing: rattlesnake venom is a multi-organ tissue/hemostatic toxin mixture; bark scorpion venom is primarily a channelopathy.</div>
 </div>
 </section>
-
 <section>
 <div class="wrap">
-  <div class="eyebrow">Scorpion pathophysiology</div>
-  <h2>A scorpion sting creates a <span style="color:var(--scorp)">hyperexcitable peripheral nervous system.</span></h2>
-  <div class="grid two">
-    <div class="card scorp">
-      <div class="tag scorp">α-Na⁺ toxins</div>
-      <h3>Delay fast inactivation</h3>
-      <p>Voltage-gated sodium channels stay active longer → prolonged depolarization and repetitive firing.</p>
-    </div>
-    <div class="card scorp">
-      <div class="tag scorp">β-Na⁺ toxins</div>
-      <h3>Shift activation to more negative potentials</h3>
-      <p>Channels activate too easily → neurons fire with less stimulus and can fire spontaneously.</p>
-    </div>
-  </div>
-  <div class="path">
-    <div class="node"><strong>Naᵥ channel toxins</strong></div><div class="arrow">→</div>
-    <div class="node"><strong>Persistent / repetitive action potentials</strong></div><div class="arrow">→</div>
-    <div class="node"><strong>Somatic motor + autonomic + sensory hyperactivity</strong></div>
-  </div>
-  <div class="note"><strong>Classic physiology paper:</strong> purified <em>C. sculpturatus</em> toxins were shown to alter sodium-channel activation/inactivation and cause spontaneous and repetitive axonal firing — exactly the physiology that later appears clinically as fasciculations, agitation, cranial nerve findings, and secretions.</div>
+<div class="eyebrow">Scorpion pathophysiology</div><div class="discussion"><div class="q-label">Discussion question</div><div class="q-text">What happens to a neuron if voltage-gated sodium channels activate too easily or fail to inactivate normally?</div></div>
+<h2>A scorpion sting creates a <span style="color:var(--scorp)">hyperexcitable peripheral nervous system.</span></h2>
+<div class="grid two">
+<div class="card scorp">
+<div class="tag scorp">α-Na⁺ toxins</div>
+<h3>Delay fast inactivation</h3>
+<p>Voltage-gated sodium channels stay active longer → prolonged depolarization and repetitive firing.</p>
+</div>
+<div class="card scorp">
+<div class="tag scorp">β-Na⁺ toxins</div>
+<h3>Shift activation to more negative potentials</h3>
+<p>Channels activate too easily → neurons fire with less stimulus and can fire spontaneously.</p>
+</div>
+</div>
+<div class="path">
+<div class="node"><strong>Naᵥ channel toxins</strong></div><div class="arrow">→</div>
+<div class="node"><strong>Persistent / repetitive action potentials</strong></div><div class="arrow">→</div>
+<div class="node"><strong>Somatic motor + autonomic + sensory hyperactivity</strong></div>
+</div>
+<div class="note"><strong>Classic physiology paper:</strong> purified <em>C. sculpturatus</em> toxins were shown to alter sodium-channel activation/inactivation and cause spontaneous and repetitive axonal firing — exactly the physiology that later appears clinically as fasciculations, agitation, cranial nerve findings, and secretions.</div>
 </div>
 </section>
-
 <section>
 <div class="wrap">
-  <div class="eyebrow">Translate the channelopathy to the bedside</div>
-  <h2>Why do they get <span style="color:var(--scorp)">eyes, mouth, and muscles?</span></h2>
-  <div class="grid three">
-    <div class="card scorp"><h3>Eyes / cranial nerves</h3><p>Disconjugate or roving eye movements, nystagmus-like movements, visual disturbance.</p><div class="small">Motor neuron hyperexcitability + cranial neuromuscular dysfunction.</div></div>
-    <div class="card scorp"><h3>Mouth / bulbar-autonomic</h3><p>Hypersalivation, dysphagia, dysarthria, tongue fasciculations, copious secretions.</p><div class="small">Autonomic discharge + bulbar dysfunction.</div></div>
-    <div class="card scorp"><h3>Muscles</h3><p>Fasciculations, jerking, severe neuromotor agitation, loss of coordinated movement.</p><div class="small">Repetitive firing of somatic motor pathways.</div></div>
-  </div>
-  <div class="callout scorp">Respiratory danger comes from secretions, airway dysfunction, disordered motor control, and occasionally pulmonary complications.</div>
-  <div class="note">Children are disproportionately represented in severe cases. A smaller child receives a larger effective venom exposure per body mass and also has less airway/respiratory reserve.</div>
+<div class="eyebrow">Translate the channelopathy to the bedside</div><div class="discussion"><div class="q-label">Discussion question</div><div class="q-text">How does sodium-channel hyperexcitability explain the classic eyes–mouth–muscles findings?</div></div>
+<h2>Why do they get <span style="color:var(--scorp)">eyes, mouth, and muscles?</span></h2>
+<div class="grid three">
+<div class="card scorp"><h3>Eyes / cranial nerves</h3><p>Disconjugate or roving eye movements, nystagmus-like movements, visual disturbance.</p><div class="small">Motor neuron hyperexcitability + cranial neuromuscular dysfunction.</div></div>
+<div class="card scorp"><h3>Mouth / bulbar-autonomic</h3><p>Hypersalivation, dysphagia, dysarthria, tongue fasciculations, copious secretions.</p><div class="small">Autonomic discharge + bulbar dysfunction.</div></div>
+<div class="card scorp"><h3>Muscles</h3><p>Fasciculations, jerking, severe neuromotor agitation, loss of coordinated movement.</p><div class="small">Repetitive firing of somatic motor pathways.</div></div>
+</div>
+<div class="callout scorp">Respiratory danger comes from secretions, airway dysfunction, disordered motor control, and occasionally pulmonary complications.</div>
+<div class="note">Children are disproportionately represented in severe cases. A smaller child receives a larger effective venom exposure per body mass and also has less airway/respiratory reserve.</div>
 </div>
 </section>
-
 <section>
 <div class="wrap">
-  <div class="eyebrow">Evidence that antivenom changes the physiology</div>
-  <h2>The scorpion trial is a fantastic teaching study.</h2>
-  <div class="card scorp">
-    <div class="tag scorp">Boyer et al. • NEJM 2009 • Arizona</div>
-    <div class="grid three">
-      <div><div class="kpi">8/8</div><p>antivenom patients had syndrome resolution within 4 hours</p></div>
-      <div><div class="kpi">1/7</div><p>placebo patients had syndrome resolution within 4 hours</p></div>
-      <div><div class="kpi">0.07</div><p>mg/kg mean cumulative midazolam vs <strong>4.61 mg/kg</strong> with placebo</p></div>
-    </div>
-    <div class="sep"></div>
-    <p>At 1 hour, circulating venom was undetectable in all 8 antivenom recipients, compared with only 1 placebo recipient.</p>
-  </div>
-  <div class="callout">This study links <strong>mechanism → venom neutralization → clinical recovery</strong>, which is why it is such a good paper to cite during a 5–10 minute teaching point.</div>
-  <div class="note">Small trial (15 children), but randomized, double-blind, placebo-controlled and performed in the exact disease phenotype we see in Arizona.</div>
+<div class="eyebrow">Evidence that antivenom changes the physiology</div><div class="discussion"><div class="q-label">Discussion question</div><div class="q-text">What would convince you that antivenom is doing more than just sedating or temporizing symptoms?</div></div>
+<h2>The scorpion trial is a fantastic teaching study.</h2>
+<div class="card scorp">
+<div class="tag scorp">Boyer et al. • NEJM 2009 • Arizona</div>
+<div class="grid three">
+<div><div class="kpi">8/8</div><p>antivenom patients had syndrome resolution within 4 hours</p></div>
+<div><div class="kpi">1/7</div><p>placebo patients had syndrome resolution within 4 hours</p></div>
+<div><div class="kpi">0.07</div><p>mg/kg mean cumulative midazolam vs <strong>4.61 mg/kg</strong> with placebo</p></div>
+</div>
+<div class="sep"></div>
+<p>At 1 hour, circulating venom was undetectable in all 8 antivenom recipients, compared with only 1 placebo recipient.</p>
+</div>
+<div class="callout">This study links <strong>mechanism → venom neutralization → clinical recovery</strong>, which is why it is such a good paper to cite during a 5–10 minute teaching point.</div>
+<div class="note">Small trial (15 children), but randomized, double-blind, placebo-controlled and performed in the exact disease phenotype we see in Arizona.</div>
 </div>
 </section>
-
 <section>
 <div class="wrap">
-  <div class="eyebrow">Real-world Arizona scorpion data</div>
-  <h2>What actually shows up?</h2>
-  <div class="card">
-    <div class="tag deep">Klotz et al. • Am J Med 2021</div>
-    <p>Arizona Poison and Drug Information Center reviewed <strong>4,398 sting calls</strong> from 2017–2019.</p>
-    <div class="grid three">
-      <div><div class="kpi">88.9%</div><p>local pain</p></div>
-      <div><div class="kpi">62.2%</div><p>local numbness</p></div>
-      <div><div class="kpi">145</div><p>patients received Anascorp</p></div>
-    </div>
-    <p>Among 593 healthcare-facility cases with detailed data: nystagmus 27.5%, hypersalivation 15.3%, and fasciculations 14.8%.</p>
-  </div>
-  <div class="note">This is useful after the physiology slide because it shows that the “eyes-mouth-muscles” framework is not just textbook pattern recognition — it matches poison-center data.</div>
+<div class="eyebrow">Real-world Arizona scorpion data</div><div class="discussion"><div class="q-label">Discussion question</div><div class="q-text">Which clinical findings are common after Arizona scorpion stings, and which findings should make you worry about severe systemic toxicity?</div></div>
+<h2>What actually shows up?</h2>
+<div class="card">
+<div class="tag deep">Klotz et al. • Am J Med 2021</div>
+<p>Arizona Poison and Drug Information Center reviewed <strong>4,398 sting calls</strong> from 2017–2019.</p>
+<div class="grid three">
+<div><div class="kpi">88.9%</div><p>local pain</p></div>
+<div><div class="kpi">62.2%</div><p>local numbness</p></div>
+<div><div class="kpi">145</div><p>patients received Anascorp</p></div>
+</div>
+<p>Among 593 healthcare-facility cases with detailed data: nystagmus 27.5%, hypersalivation 15.3%, and fasciculations 14.8%.</p>
+</div>
+<div class="note">This is useful after the physiology slide because it shows that the “eyes-mouth-muscles” framework is not just textbook pattern recognition — it matches poison-center data.</div>
 </div>
 </section>
-
 <section>
 <div class="wrap">
-  <div class="eyebrow">Back to the two patients</div>
-  <div class="grid two">
-    <div class="card snake">
-      <div class="tag snake">Case 1</div>
-      <h3>30-year-old with 4 cm ankle swelling, normal vitals, normal platelets/fibrinogen</h3>
-      <p><strong>Question:</strong> is the swelling progressing?</p>
-      <p>If stable and no systemic or hematologic toxicity → serial exams/labs and observation. If progressing → antivenom.</p>
-    </div>
-    <div class="card scorp">
-      <div class="tag scorp">Case 2</div>
-      <h3>3-year-old with drooling, roving eyes, and jerking</h3>
-      <p>This is no longer “a painful sting.” It is a systemic sodium-channel neurotoxicity syndrome.</p>
-      <p><strong>Airway + monitoring + Poison Control/toxicology + Anascorp.</strong></p>
-    </div>
-  </div>
-  <div class="callout">Same word — “envenomation” — but completely different physiology.</div>
+<div class="eyebrow">Back to the two patients</div><div class="discussion"><div class="q-label">Discussion question</div><div class="q-text">For the snake case, what finding would make you switch from observation to antivenom? For the scorpion case, what finding already crossed that threshold?</div></div>
+<div class="grid two">
+<div class="card snake">
+<div class="tag snake">Case 1</div>
+<h3>30-year-old with 4 cm ankle swelling, normal vitals, normal platelets/fibrinogen</h3>
+<p><strong>Question:</strong> is the swelling progressing?</p>
+<p>If stable and no systemic or hematologic toxicity → serial exams/labs and observation. If progressing → antivenom.</p>
+</div>
+<div class="card scorp">
+<div class="tag scorp">Case 2</div>
+<h3>3-year-old with drooling, roving eyes, and jerking</h3>
+<p>This is no longer “a painful sting.” It is a systemic sodium-channel neurotoxicity syndrome.</p>
+<p><strong>Airway + monitoring + Poison Control/toxicology + Anascorp.</strong></p>
+</div>
+</div>
+<div class="callout">Same word — “envenomation” — but completely different physiology.</div>
 </div>
 </section>
-
 <section>
 <div class="wrap">
-  <div class="eyebrow">Studies worth naming out loud</div>
-  <h2>If you cite only four papers, use these.</h2>
-
-  <div class="study"><strong>1. Boyer LV et al. NEJM 2009.</strong><p>Randomized, double-blind placebo-controlled trial of scorpion F(ab′)₂ antivenom in 15 critically ill children: 8/8 vs 1/7 clinical resolution by 4 hours.</p></div>
-  <div class="study"><strong>2. Bush SP et al. Clin Toxicol 2015.</strong><p>Prospective blinded randomized multicenter trial: F(ab′)₂ reduced late coagulopathy compared with Fab, supporting the importance of antivenom persistence.</p></div>
-  <div class="study"><strong>3. Greene S et al. Toxicon X 2023.</strong><p>North American Snakebite Registry: striking geographic variation in <em class="tax">C. scutulatus</em> neurotoxicity — an excellent antidote to the “all Mohaves are neurotoxic” simplification.</p></div>
-  <div class="study"><strong>4. Brandehoff N et al. Wilderness Environ Med 2026.</strong><p>The newly updated Wilderness Medical Society North American pit-viper guideline, now incorporating both Fab and F(ab′)₂ antivenom.</p></div>
-
-  <div class="note"><strong>Optional 5th:</strong> Gerardo et al., Ann Emerg Med 2017 — randomized copperhead trial showed better limb function at day 14 with Fab antivenom. Different species, so present it as broader crotalid evidence rather than direct Arizona-rattlesnake evidence.</div>
+<div class="eyebrow">Studies worth naming out loud</div><div class="discussion"><div class="q-label">Discussion question</div><div class="q-text">If you had to cite only one snakebite paper and one scorpion paper during this talk, which ones would be most useful and why?</div></div>
+<h2>If you cite only four papers, use these.</h2>
+<div class="study"><strong>1. Boyer LV et al. NEJM 2009.</strong><p>Randomized, double-blind placebo-controlled trial of scorpion F(ab′)₂ antivenom in 15 critically ill children: 8/8 vs 1/7 clinical resolution by 4 hours.</p></div>
+<div class="study"><strong>2. Bush SP et al. Clin Toxicol 2015.</strong><p>Prospective blinded randomized multicenter trial: F(ab′)₂ reduced late coagulopathy compared with Fab, supporting the importance of antivenom persistence.</p></div>
+<div class="study"><strong>3. Greene S et al. Toxicon X 2023.</strong><p>North American Snakebite Registry: striking geographic variation in <em class="tax">C. scutulatus</em> neurotoxicity — an excellent antidote to the “all Mohaves are neurotoxic” simplification.</p></div>
+<div class="study"><strong>4. Brandehoff N et al. Wilderness Environ Med 2026.</strong><p>The newly updated Wilderness Medical Society North American pit-viper guideline, now incorporating both Fab and F(ab′)₂ antivenom.</p></div>
+<div class="note"><strong>Optional 5th:</strong> Gerardo et al., Ann Emerg Med 2017 — randomized copperhead trial showed better limb function at day 14 with Fab antivenom. Different species, so present it as broader crotalid evidence rather than direct Arizona-rattlesnake evidence.</div>
 </div>
 </section>
-
 <section>
 <div class="wrap center">
-  <div class="eyebrow">Take-home</div>
-  <h2>Follow the physiology.</h2>
-  <div class="grid two" style="text-align:left;margin-top:28px">
-    <div class="card snake">
-      <div class="tag snake">Rattlesnake</div>
-      <div class="big">Proteases + PLA₂ + hemostatic toxins</div>
-      <p>→ progressive tissue injury<br>→ fibrinogen/platelet abnormalities<br>→ systemic toxicity ± neurotoxicity</p>
-      <div class="callout snake">Progression is the treatment trigger.</div>
-    </div>
-    <div class="card scorp">
-      <div class="tag scorp"><em class="tax">Centruroides sculpturatus</em></div>
-      <div class="big">Naᵥ-channel toxins</div>
-      <p>→ repetitive neuronal firing<br>→ eyes + mouth + muscles<br>→ respiratory risk in severe cases</p>
-      <div class="callout scorp">Neuromotor toxicity is the treatment trigger.</div>
-    </div>
-  </div>
-  <p class="lede" style="margin-top:30px"><strong>Poison Control: 1-800-222-1222</strong></p>
+<div class="eyebrow">Take-home</div><div class="discussion"><div class="q-label">Discussion question</div><div class="q-text">Final question: what physiologic pattern should trigger antivenom thinking for each animal?</div></div>
+<h2>Follow the physiology.</h2>
+<div class="grid two" style="text-align:left;margin-top:28px">
+<div class="card snake">
+<div class="tag snake">Rattlesnake</div>
+<div class="big">Proteases + PLA₂ + hemostatic toxins</div>
+<p>→ progressive tissue injury<br/>→ fibrinogen/platelet abnormalities<br/>→ systemic toxicity ± neurotoxicity</p>
+<div class="callout snake">Progression is the treatment trigger.</div>
+</div>
+<div class="card scorp">
+<div class="tag scorp"><em class="tax">Centruroides sculpturatus</em></div>
+<div class="big">Naᵥ-channel toxins</div>
+<p>→ repetitive neuronal firing<br/>→ eyes + mouth + muscles<br/>→ respiratory risk in severe cases</p>
+<div class="callout scorp">Neuromotor toxicity is the treatment trigger.</div>
+</div>
+</div>
+<p class="lede" style="margin-top:30px"><strong>Poison Control: 1-800-222-1222</strong></p>
 </div>
 </section>
-
 <section>
 <div class="wrap">
-  <div class="eyebrow">References</div>
-  <h2>Core sources</h2>
-  <div class="ref">Brandehoff N, et al. Wilderness Medical Society Clinical Practice Guidelines for the Treatment of Pit Viper Envenomations in the United States and Canada: 2026 Update. <em>Wilderness Environ Med.</em> 2026. DOI: 10.1177/10806032261451823.</div>
-  <div class="ref">Boyer LV, et al. Antivenom for critically ill children with neurotoxicity from scorpion stings. <em>N Engl J Med.</em> 2009;360:2090-2098. DOI: 10.1056/NEJMoa0808455.</div>
-  <div class="ref">Bush SP, et al. Comparison of F(ab′)₂ versus Fab antivenom for pit viper envenomation: a prospective, blinded, multicenter, randomized clinical trial. <em>Clin Toxicol.</em> 2015;53:37-45. DOI: 10.3109/15563650.2014.974263.</div>
-  <div class="ref">Greene S, et al. Geographic variation in the clinical features of Mohave rattlesnake (<em>Crotalus scutulatus</em>) envenomations reported to the North American Snakebite Registry. <em>Toxicon X.</em> 2023;21:100171.</div>
-  <div class="ref">Ruha AM, et al. Early Experience with Crotalidae Immune F(ab′)₂ Antivenom to Treat Arizona Rattlesnake Envenomations. <em>J Med Toxicol.</em> 2022;18:38-42.</div>
-  <div class="ref">Klotz SA, et al. Scorpion Stings and Antivenom Use in Arizona. <em>Am J Med.</em> 2021;134:1034-1038.</div>
-  <div class="ref">Newman J, et al. Compartment Syndrome Following Snake Envenomation in the United States: A Scoping Review of the Clinical Literature. <em>West J Emerg Med.</em> 2024;25:651-660.</div>
-  <div class="ref">Arizona Poison and Drug Information Center. Rattlesnakes of Arizona; Scorpions. Accessed September 15, 2026.</div>
-  <div class="note">This page is for clinician education, not a substitute for patient-specific toxicology consultation or current product labeling.</div>
+<div class="eyebrow">References</div><div class="discussion"><div class="q-label">Discussion question</div><div class="q-text">After seeing the evidence base, what important clinical question about Arizona envenomation still feels incompletely answered?</div></div>
+<h2>Core sources</h2>
+<div class="ref">Brandehoff N, et al. Wilderness Medical Society Clinical Practice Guidelines for the Treatment of Pit Viper Envenomations in the United States and Canada: 2026 Update. <em>Wilderness Environ Med.</em> 2026. DOI: 10.1177/10806032261451823.</div>
+<div class="ref">Boyer LV, et al. Antivenom for critically ill children with neurotoxicity from scorpion stings. <em>N Engl J Med.</em> 2009;360:2090-2098. DOI: 10.1056/NEJMoa0808455.</div>
+<div class="ref">Bush SP, et al. Comparison of F(ab′)₂ versus Fab antivenom for pit viper envenomation: a prospective, blinded, multicenter, randomized clinical trial. <em>Clin Toxicol.</em> 2015;53:37-45. DOI: 10.3109/15563650.2014.974263.</div>
+<div class="ref">Greene S, et al. Geographic variation in the clinical features of Mohave rattlesnake (<em>Crotalus scutulatus</em>) envenomations reported to the North American Snakebite Registry. <em>Toxicon X.</em> 2023;21:100171.</div>
+<div class="ref">Ruha AM, et al. Early Experience with Crotalidae Immune F(ab′)₂ Antivenom to Treat Arizona Rattlesnake Envenomations. <em>J Med Toxicol.</em> 2022;18:38-42.</div>
+<div class="ref">Klotz SA, et al. Scorpion Stings and Antivenom Use in Arizona. <em>Am J Med.</em> 2021;134:1034-1038.</div>
+<div class="ref">Newman J, et al. Compartment Syndrome Following Snake Envenomation in the United States: A Scoping Review of the Clinical Literature. <em>West J Emerg Med.</em> 2024;25:651-660.</div>
+<div class="ref">Arizona Poison and Drug Information Center. Rattlesnakes of Arizona; Scorpions. Accessed September 15, 2026.</div>
+<div class="note">This page is for clinician education, not a substitute for patient-specific toxicology consultation or current product labeling.</div>
 </div>
 </section>
-
 <script>
 const sections=[...document.querySelectorAll('section')];
 const nav=document.getElementById('nav');
