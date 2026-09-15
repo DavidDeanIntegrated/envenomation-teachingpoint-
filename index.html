@@ -103,8 +103,24 @@ body.notes .note{display:block}
 .discussion .q-text{
   font-size:clamp(18px,1.8vw,25px);line-height:1.4;font-weight:720;color:#f0f6f4;
 }
+
+.discussion .q-answer{
+  margin-top:12px;
+  padding-top:12px;
+  border-top:1px solid rgba(117,229,168,.20);
+  font-size:clamp(15px,1.35vw,19px);
+  line-height:1.5;
+  color:#d6e6de;
+}
+.discussion .q-answer strong{
+  color:var(--green);
+  text-transform:uppercase;
+  letter-spacing:.09em;
+  font-size:11px;
+  margin-right:7px;
+}
 </style>
-<script type="text/javascript" nonce="e440df172f4e4210ad1cd5abeb5" src="//local.adguard.org?ts=1789507331733&amp;type=content-script&amp;dmn=chatgpt.com&amp;url=https%3A%2F%2Fchatgpt.com%2Fbackend-api%2Festuary%2Fcontent%3Fid%3Dfile_00000000f97c81fda2802637879d001e%26ts%3D497085%26p%3Dfs%26cid%3D1%26sig%3Dffb172cd4e9ca593ba4531b448574502969970de25579854caf5b5738c159dc6%26v%3D0&amp;app=com.google.Chrome&amp;css=2&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=1"></script><script type="text/javascript" nonce="e440df172f4e4210ad1cd5abeb5" src="//local.adguard.org?ts=1789507331733&amp;name=AdGuard%20Extra&amp;type=user-script"></script></head>
+<script type="text/javascript" nonce="e440df172f4e4210ad1cd5abeb5" src="//local.adguard.org?ts=1789507331733&amp;type=content-script&amp;dmn=chatgpt.com&amp;url=https%3A%2F%2Fchatgpt.com%2Fbackend-api%2Festuary%2Fcontent%3Fid%3Dfile_00000000d3f482309b3aefe066d8d048%26ts%3D497085%26p%3Dfs%26cid%3D1%26sig%3Db182d2b7429f40f27cea9042fd734c1f1500f6f41cb0317408b2ec6621cdd815%26v%3D0&amp;app=com.google.Chrome&amp;css=2&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=1"></script><script type="text/javascript" nonce="e440df172f4e4210ad1cd5abeb5" src="//local.adguard.org?ts=1789507331733&amp;name=AdGuard%20Extra&amp;type=user-script"></script></head>
 <body>
 <div class="topbar">
 <div class="brand">Arizona Envenomation • EM Shift Change</div>
@@ -115,7 +131,7 @@ body.notes .note{display:block}
 <nav class="nav" id="nav"></nav>
 <section>
 <div class="wrap">
-<div class="eyebrow">Pathophysiology → bedside phenotype → treatment</div><div class="discussion"><div class="q-label">Discussion question</div><div class="q-text">Before we start: what single physiologic difference best separates rattlesnake envenomation from bark scorpion envenomation?</div></div>
+<div class="eyebrow">Pathophysiology → bedside phenotype → treatment</div><div class="discussion"><div class="q-label">Discussion question</div><div class="q-text">Before we start: what single physiologic difference best separates rattlesnake envenomation from bark scorpion envenomation?</div><div class="q-answer"><strong>Answer</strong> Rattlesnake venom primarily causes local tissue injury, hemostatic disruption, and sometimes systemic/neurotoxic effects; bark scorpion venom primarily causes neuronal hyperexcitability through ion-channel toxins.</div></div>
 <h1>Arizona<br/><span style="color:var(--snake)">Envenomation</span></h1>
 <p class="lede">Rattlesnakes and the Arizona bark scorpion look like two separate toxicology problems. They become much easier when you understand <strong>what the venom is doing at the molecular level.</strong></p>
 <div>
@@ -127,7 +143,7 @@ body.notes .note{display:block}
 </section>
 <section>
 <div class="wrap">
-<div class="eyebrow">Taxonomy • Arizona pit vipers</div><div class="discussion"><div class="q-label">Discussion question</div><div class="q-text">If you had to treat before you knew the exact species, how much would species identification actually change your immediate ED management?</div></div>
+<div class="eyebrow">Taxonomy • Arizona pit vipers</div><div class="discussion"><div class="q-label">Discussion question</div><div class="q-text">If you had to treat before you knew the exact species, how much would species identification actually change your immediate ED management?</div><div class="q-answer"><strong>Answer</strong> Usually not much. Initial treatment is driven more by the evolving clinical syndrome than by exact species identification. Species matters mainly when anticipating unusual venom phenotypes, such as possible neurotoxicity.</div></div>
 <h2>Who are we actually talking about?</h2>
 <div class="grid two">
 <div class="card snake">
@@ -156,7 +172,7 @@ body.notes .note{display:block}
 </section>
 <section>
 <div class="wrap">
-<div class="eyebrow">Rattlesnake pathophysiology</div><div class="discussion"><div class="q-label">Discussion question</div><div class="q-text">Why can two rattlesnake bites produce very different combinations of swelling, coagulopathy, and neurologic findings?</div></div>
+<div class="eyebrow">Rattlesnake pathophysiology</div><div class="discussion"><div class="q-label">Discussion question</div><div class="q-text">Why can two rattlesnake bites produce very different combinations of swelling, coagulopathy, and neurologic findings?</div><div class="q-answer"><strong>Answer</strong> Because rattlesnake venom is a variable mixture of toxin families. The relative amounts and activity of metalloproteinases, phospholipase A₂ enzymes, serine proteases, platelet-active toxins, and neurotoxins differ by species, geography, and individual snake.</div></div>
 <h2>Venom is not one toxin.<br/>It is a <span style="color:var(--snake)">biochemical cocktail.</span></h2>
 <div class="path">
 <div class="node"><div class="molecule">Injection</div><strong>Subcutaneous / tissue venom depot</strong></div>
@@ -171,7 +187,7 @@ body.notes .note{display:block}
 </section>
 <section>
 <div class="wrap">
-<div class="eyebrow">Why does the limb swell?</div><div class="discussion"><div class="q-label">Discussion question</div><div class="q-text">What venom effect best explains rapidly expanding edema without requiring infection or a true compartment syndrome?</div></div>
+<div class="eyebrow">Why does the limb swell?</div><div class="discussion"><div class="q-label">Discussion question</div><div class="q-text">What venom effect best explains rapidly expanding edema without requiring infection or a true compartment syndrome?</div><div class="q-answer"><strong>Answer</strong> Venom-mediated vascular injury and permeability. Metalloproteinases damage capillary basement membranes while phospholipase A₂ and inflammatory mediators worsen membrane injury and edema.</div></div>
 <h2>Local injury = <span style="color:var(--snake)">vascular leak + matrix destruction + inflammation</span></h2>
 <div class="grid three">
 <div class="card">
@@ -198,7 +214,7 @@ body.notes .note{display:block}
 </section>
 <section>
 <div class="wrap">
-<div class="eyebrow">Why do fibrinogen and platelets fall?</div><div class="discussion"><div class="q-label">Discussion question</div><div class="q-text">If the fibrinogen is falling and the INR is rising, what is the venom actually doing to the coagulation system?</div></div>
+<div class="eyebrow">Why do fibrinogen and platelets fall?</div><div class="discussion"><div class="q-label">Discussion question</div><div class="q-text">If the fibrinogen is falling and the INR is rising, what is the venom actually doing to the coagulation system?</div><div class="q-answer"><strong>Answer</strong> Venom enzymes directly disturb hemostasis: some consume or cleave fibrinogen, alter clotting factors, injure vessels, and impair platelet function or promote platelet clearance. The pattern is venom-induced coagulopathy rather than classic sepsis-associated DIC.</div></div>
 <h2>Venom-induced coagulopathy is <span style="color:var(--purple)">active toxin physiology</span></h2>
 <div class="table">
 <div class="cell head">Venom component</div><div class="cell head">Mechanism</div><div class="cell head">What you see</div>
@@ -212,7 +228,7 @@ body.notes .note{display:block}
 </section>
 <section>
 <div class="wrap">
-<div class="eyebrow">The neurotoxic exception</div><div class="discussion"><div class="q-label">Discussion question</div><div class="q-text">If someone says “Mohave rattlesnake equals neurotoxic bite,” what would make you push back on that statement?</div></div>
+<div class="eyebrow">The neurotoxic exception</div><div class="discussion"><div class="q-label">Discussion question</div><div class="q-text">If someone says “Mohave rattlesnake equals neurotoxic bite,” what would make you push back on that statement?</div><div class="q-answer"><strong>Answer</strong> Because neurotoxicity varies geographically and by venom phenotype. Not every Crotalus scutulatus population expresses clinically important Mojave toxin, and Arizona registry cases have shown substantial local/systemic toxicity without neurologic findings.</div></div>
 <h2><em class="tax">Crotalus scutulatus</em>: the “Mohave toxin” story is more complicated than the textbook.</h2>
 <div class="grid two">
 <div class="card snake">
@@ -235,7 +251,7 @@ body.notes .note{display:block}
 </section>
 <section>
 <div class="wrap">
-<div class="eyebrow">Snakebite management target</div><div class="discussion"><div class="q-label">Discussion question</div><div class="q-text">What does “initial control” of rattlesnake envenomation actually mean at the bedside?</div></div>
+<div class="eyebrow">Snakebite management target</div><div class="discussion"><div class="q-label">Discussion question</div><div class="q-text">What does “initial control” of rattlesnake envenomation actually mean at the bedside?</div><div class="q-answer"><strong>Answer</strong> Initial control means local tissue effects have stopped progressing, systemic venom effects have resolved, and hematologic abnormalities are clearly stabilizing or improving.</div></div>
 <h2>Antivenom is titrated to <span style="color:var(--green)">initial control</span>.</h2>
 <div class="grid three">
 <div class="card"><div class="kpi">1</div><h3>Local</h3><p>Progression of swelling/tissue injury stops.</p></div>
@@ -253,7 +269,7 @@ body.notes .note{display:block}
 </section>
 <section>
 <div class="wrap">
-<div class="eyebrow">A common ED trap</div><div class="discussion"><div class="q-label">Discussion question</div><div class="q-text">A swollen, tense extremity after rattlesnake bite looks like compartment syndrome. What should happen before anyone reaches for a scalpel?</div></div>
+<div class="eyebrow">A common ED trap</div><div class="discussion"><div class="q-label">Discussion question</div><div class="q-text">A swollen, tense extremity after rattlesnake bite looks like compartment syndrome. What should happen before anyone reaches for a scalpel?</div><div class="q-answer"><strong>Answer</strong> Give adequate antivenom, perform serial neurovascular exams, obtain toxicology/poison-center input, and use objective compartment-pressure assessment when the diagnosis remains uncertain. Fasciotomy should not be reflexive.</div></div>
 <h2>“The limb is huge — is this compartment syndrome?”</h2>
 <div class="grid two">
 <div class="card">
@@ -272,7 +288,7 @@ body.notes .note{display:block}
 </section>
 <section>
 <div class="wrap">
-<div class="eyebrow">Why Fab vs F(ab′)₂ matters</div><div class="discussion"><div class="q-label">Discussion question</div><div class="q-text">Why might one antivenom be more likely than another to prevent recurrent hematologic toxicity after the initial symptoms improve?</div></div>
+<div class="eyebrow">Why Fab vs F(ab′)₂ matters</div><div class="discussion"><div class="q-label">Discussion question</div><div class="q-text">Why might one antivenom be more likely than another to prevent recurrent hematologic toxicity after the initial symptoms improve?</div><div class="q-answer"><strong>Answer</strong> Persistence in the circulation. F(ab′)₂ fragments have a longer half-life than Fab fragments, so they may remain present long enough to neutralize venom that redistributes later and thereby reduce recurrent hemotoxicity.</div></div>
 <h2>The pharmacokinetics explain <span style="color:var(--purple)">recurrent hemotoxicity.</span></h2>
 <div class="grid two">
 <div class="card snake">
@@ -293,7 +309,7 @@ body.notes .note{display:block}
 </section>
 <section>
 <div class="wrap">
-<div class="eyebrow">Taxonomy • Arizona scorpion</div><div class="discussion"><div class="q-label">Discussion question</div><div class="q-text">Why is Centruroides sculpturatus the scorpion species we care most about in Arizona?</div></div>
+<div class="eyebrow">Taxonomy • Arizona scorpion</div><div class="discussion"><div class="q-label">Discussion question</div><div class="q-text">Why is Centruroides sculpturatus the scorpion species we care most about in Arizona?</div><div class="q-answer"><strong>Answer</strong> Centruroides sculpturatus is the Arizona bark scorpion and the Arizona species most associated with severe human neurotoxicity, especially in young children.</div></div>
 <h2>The dangerous one is <em class="tax">Centruroides sculpturatus</em>.</h2>
 <div class="grid two">
 <div class="card scorp">
@@ -313,7 +329,7 @@ body.notes .note{display:block}
 </section>
 <section>
 <div class="wrap">
-<div class="eyebrow">Scorpion pathophysiology</div><div class="discussion"><div class="q-label">Discussion question</div><div class="q-text">What happens to a neuron if voltage-gated sodium channels activate too easily or fail to inactivate normally?</div></div>
+<div class="eyebrow">Scorpion pathophysiology</div><div class="discussion"><div class="q-label">Discussion question</div><div class="q-text">What happens to a neuron if voltage-gated sodium channels activate too easily or fail to inactivate normally?</div><div class="q-answer"><strong>Answer</strong> The neuron becomes hyperexcitable. Easier activation and delayed inactivation of voltage-gated sodium channels lead to prolonged depolarization, spontaneous firing, and repetitive action potentials.</div></div>
 <h2>A scorpion sting creates a <span style="color:var(--scorp)">hyperexcitable peripheral nervous system.</span></h2>
 <div class="grid two">
 <div class="card scorp">
@@ -337,7 +353,7 @@ body.notes .note{display:block}
 </section>
 <section>
 <div class="wrap">
-<div class="eyebrow">Translate the channelopathy to the bedside</div><div class="discussion"><div class="q-label">Discussion question</div><div class="q-text">How does sodium-channel hyperexcitability explain the classic eyes–mouth–muscles findings?</div></div>
+<div class="eyebrow">Translate the channelopathy to the bedside</div><div class="discussion"><div class="q-label">Discussion question</div><div class="q-text">How does sodium-channel hyperexcitability explain the classic eyes–mouth–muscles findings?</div><div class="q-answer"><strong>Answer</strong> The same repetitive neuronal firing affects cranial motor pathways, autonomic output, and skeletal motor neurons, producing abnormal eye movements, hypersalivation/bulbar symptoms, fasciculations, and uncontrolled movements.</div></div>
 <h2>Why do they get <span style="color:var(--scorp)">eyes, mouth, and muscles?</span></h2>
 <div class="grid three">
 <div class="card scorp"><h3>Eyes / cranial nerves</h3><p>Disconjugate or roving eye movements, nystagmus-like movements, visual disturbance.</p><div class="small">Motor neuron hyperexcitability + cranial neuromuscular dysfunction.</div></div>
@@ -350,7 +366,7 @@ body.notes .note{display:block}
 </section>
 <section>
 <div class="wrap">
-<div class="eyebrow">Evidence that antivenom changes the physiology</div><div class="discussion"><div class="q-label">Discussion question</div><div class="q-text">What would convince you that antivenom is doing more than just sedating or temporizing symptoms?</div></div>
+<div class="eyebrow">Evidence that antivenom changes the physiology</div><div class="discussion"><div class="q-label">Discussion question</div><div class="q-text">What would convince you that antivenom is doing more than just sedating or temporizing symptoms?</div><div class="q-answer"><strong>Answer</strong> Rapid disappearance of the neurotoxic syndrome together with a measurable drop in circulating free venom. In the Boyer trial, antivenom recipients improved quickly and plasma venom became undetectable far more often than with placebo.</div></div>
 <h2>The scorpion trial is a fantastic teaching study.</h2>
 <div class="card scorp">
 <div class="tag scorp">Boyer et al. • NEJM 2009 • Arizona</div>
@@ -368,7 +384,7 @@ body.notes .note{display:block}
 </section>
 <section>
 <div class="wrap">
-<div class="eyebrow">Real-world Arizona scorpion data</div><div class="discussion"><div class="q-label">Discussion question</div><div class="q-text">Which clinical findings are common after Arizona scorpion stings, and which findings should make you worry about severe systemic toxicity?</div></div>
+<div class="eyebrow">Real-world Arizona scorpion data</div><div class="discussion"><div class="q-label">Discussion question</div><div class="q-text">Which clinical findings are common after Arizona scorpion stings, and which findings should make you worry about severe systemic toxicity?</div><div class="q-answer"><strong>Answer</strong> Pain and local numbness are common. Roving or abnormal eye movements, hypersalivation, dysphagia/dysarthria, fasciculations, uncontrolled jerking, respiratory difficulty, or marked neuromotor agitation suggest significant systemic envenomation.</div></div>
 <h2>What actually shows up?</h2>
 <div class="card">
 <div class="tag deep">Klotz et al. • Am J Med 2021</div>
@@ -385,7 +401,7 @@ body.notes .note{display:block}
 </section>
 <section>
 <div class="wrap">
-<div class="eyebrow">Back to the two patients</div><div class="discussion"><div class="q-label">Discussion question</div><div class="q-text">For the snake case, what finding would make you switch from observation to antivenom? For the scorpion case, what finding already crossed that threshold?</div></div>
+<div class="eyebrow">Back to the two patients</div><div class="discussion"><div class="q-label">Discussion question</div><div class="q-text">For the snake case, what finding would make you switch from observation to antivenom? For the scorpion case, what finding already crossed that threshold?</div><div class="q-answer"><strong>Answer</strong> For the snake: progression of local injury, clinically important hematologic toxicity, or systemic/neurotoxic findings. For the scorpion: the child already has severe neuromotor toxicity with drooling, roving eyes, and jerking.</div></div>
 <div class="grid two">
 <div class="card snake">
 <div class="tag snake">Case 1</div>
@@ -405,7 +421,7 @@ body.notes .note{display:block}
 </section>
 <section>
 <div class="wrap">
-<div class="eyebrow">Studies worth naming out loud</div><div class="discussion"><div class="q-label">Discussion question</div><div class="q-text">If you had to cite only one snakebite paper and one scorpion paper during this talk, which ones would be most useful and why?</div></div>
+<div class="eyebrow">Studies worth naming out loud</div><div class="discussion"><div class="q-label">Discussion question</div><div class="q-text">If you had to cite only one snakebite paper and one scorpion paper during this talk, which ones would be most useful and why?</div><div class="q-answer"><strong>Answer</strong> For scorpion, Boyer et al. 2009 is the cleanest mechanistic randomized trial. For snakebite, Bush et al. 2015 is especially useful for understanding Fab versus F(ab′)₂ and recurrent coagulopathy.</div></div>
 <h2>If you cite only four papers, use these.</h2>
 <div class="study"><strong>1. Boyer LV et al. NEJM 2009.</strong><p>Randomized, double-blind placebo-controlled trial of scorpion F(ab′)₂ antivenom in 15 critically ill children: 8/8 vs 1/7 clinical resolution by 4 hours.</p></div>
 <div class="study"><strong>2. Bush SP et al. Clin Toxicol 2015.</strong><p>Prospective blinded randomized multicenter trial: F(ab′)₂ reduced late coagulopathy compared with Fab, supporting the importance of antivenom persistence.</p></div>
@@ -416,7 +432,7 @@ body.notes .note{display:block}
 </section>
 <section>
 <div class="wrap center">
-<div class="eyebrow">Take-home</div><div class="discussion"><div class="q-label">Discussion question</div><div class="q-text">Final question: what physiologic pattern should trigger antivenom thinking for each animal?</div></div>
+<div class="eyebrow">Take-home</div><div class="discussion"><div class="q-label">Discussion question</div><div class="q-text">Final question: what physiologic pattern should trigger antivenom thinking for each animal?</div><div class="q-answer"><strong>Answer</strong> Rattlesnake: progression of tissue, hematologic, or systemic toxicity. Scorpion: clinically important neurotoxicity, especially eyes, mouth/bulbar, muscles, or respiratory involvement.</div></div>
 <h2>Follow the physiology.</h2>
 <div class="grid two" style="text-align:left;margin-top:28px">
 <div class="card snake">
@@ -437,7 +453,7 @@ body.notes .note{display:block}
 </section>
 <section>
 <div class="wrap">
-<div class="eyebrow">References</div><div class="discussion"><div class="q-label">Discussion question</div><div class="q-text">After seeing the evidence base, what important clinical question about Arizona envenomation still feels incompletely answered?</div></div>
+<div class="eyebrow">References</div><div class="discussion"><div class="q-label">Discussion question</div><div class="q-text">After seeing the evidence base, what important clinical question about Arizona envenomation still feels incompletely answered?</div><div class="q-answer"><strong>Answer</strong> Examples include the optimal antivenom strategy for specific Arizona rattlesnake phenotypes, how best to predict delayed or recurrent toxicity, and which patients with apparently mild early findings can be safely discharged sooner.</div></div>
 <h2>Core sources</h2>
 <div class="ref">Brandehoff N, et al. Wilderness Medical Society Clinical Practice Guidelines for the Treatment of Pit Viper Envenomations in the United States and Canada: 2026 Update. <em>Wilderness Environ Med.</em> 2026. DOI: 10.1177/10806032261451823.</div>
 <div class="ref">Boyer LV, et al. Antivenom for critically ill children with neurotoxicity from scorpion stings. <em>N Engl J Med.</em> 2009;360:2090-2098. DOI: 10.1056/NEJMoa0808455.</div>
